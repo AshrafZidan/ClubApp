@@ -1,0 +1,41 @@
+#container{
+    padding: 20px 8px;
+    min-height: 100%;
+ .media{
+    right: 23% !important;
+    bottom: 20%;
+    img.moreImage{
+       width: 12%;
+    }
+   
+  
+
+ }
+ .mediaSlider {
+   img.moreImage:nth-child(2) {
+      right: 15% !important;
+  }
+  img.moreImage:nth-child(3) {
+      right: 25% !important;
+  }
+  img.moreImage:nth-child(4) {
+      right: 35% !important;
+  }
+
+   .date{
+      span{
+
+           letter-spacing: 4px;
+       }
+  }
+  
+   img.moreImage:nth-child(1){
+   
+      right: 18px;
+   }
+      
+ }
+}
+ion-slides{
+    height: 100%;
+}

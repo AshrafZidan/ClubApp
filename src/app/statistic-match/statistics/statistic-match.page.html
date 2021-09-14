@@ -1,0 +1,226 @@
+<app-header headerTitle="إحصائيات"></app-header>
+
+<ion-content class="setting-content" [fullscreen]="true">
+
+  <ion-slides [options]="slideOpts" pager="false">
+    <ion-slide>
+      <ion-item button (click)="changeStatus('first')">
+        <ion-icon *ngIf="selectStatus != 'first'" src="./assets/img/statistic/chart_line.svg" slot="start">
+        </ion-icon>
+        <ion-icon *ngIf="selectStatus == 'first'" src="./assets/img/statistic/chart_line_active.svg" slot="start">
+        </ion-icon>
+        <ion-label>
+          <h3>
+            إحصائيات الفرق المنافسة
+          </h3>
+        </ion-label>
+      </ion-item>
+    </ion-slide>
+    <ion-slide>
+      <ion-item button (click)="changeStatus('second')">
+        <ion-icon *ngIf="selectStatus != 'second'" src="./assets/img/statistic/calendar_check.svg"></ion-icon>
+        <ion-icon *ngIf="selectStatus == 'second'" src="./assets/img/statistic/calendar_check_active.svg">
+        </ion-icon>
+        <ion-label>
+          <h3>
+            إحصائيات الأعوام
+          </h3>
+        </ion-label>
+      </ion-item>
+    </ion-slide>
+    <ion-slide>
+      <ion-item button (click)="changeStatus('three')">
+        <ion-icon *ngIf="selectStatus != 'three'" src="./assets/img/statistic/bullseye.svg"></ion-icon>
+        <ion-icon *ngIf="selectStatus == 'three'" src="./assets/img/statistic/bullseye_active.svg"></ion-icon>
+        <ion-label>
+          <h3>
+            الهاتريك
+          </h3>
+        </ion-label>
+      </ion-item>
+    </ion-slide>
+    <ion-slide>
+      <ion-item button (click)="changeStatus('four')">
+        <ion-icon *ngIf="selectStatus != 'four'" src="./assets/img/statistic/bullseye.svg"></ion-icon>
+        <ion-icon *ngIf="selectStatus == 'four'" src="./assets/img/statistic/bullseye_active.svg"></ion-icon>
+        <ion-label>
+          <h3>
+            إحصائيات البطاقات
+          </h3>
+        </ion-label>
+      </ion-item>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-list *ngIf="selectStatus == 'first'" class="ion-padding notification-profile fisrt-list" lines="inset">
+
+    <ion-item (click)="openPage('/statistic-match/team')">
+      <ion-avatar class="cotch-img" slot="start">
+        <img src="./assets/img/team/flag.png">
+
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+
+      </ion-label>
+
+      <p class="end-par" slot="end">20</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar class="cotch-img" slot="start">
+        <img src="./assets/img/team/flag.png">
+
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+
+      </ion-label>
+      <p class="end-par" slot="end">30</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar class="cotch-img" slot="start">
+        <img src="./assets/img/team/flag.png">
+
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+
+      </ion-label>
+      <p class="end-par" slot="end">40</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar class="cotch-img" slot="start">
+        <img src="./assets/img/team/flag.png">
+
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+
+      </ion-label>
+      <p class="end-par" slot="end">50</p>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list *ngIf="selectStatus == 'second'" class="ion-padding notification-profile fisrt-list" lines="inset">
+    <ion-item (click)="openPage('/statistic-match/years')">
+      <p class="start-par" slot="start">2020</p>
+      <p class="end-par" slot="end">20</p>
+    </ion-item>
+
+    <ion-item>
+      <p class="start-par" slot="start">2020</p>
+      <p class="end-par" slot="end">30</p>
+    </ion-item>
+    <ion-item>
+      <p class="start-par" slot="start">2020</p>
+      <p class="end-par" slot="end">40</p>
+    </ion-item>
+    <ion-item>
+      <p class="start-par" slot="start">2020</p>
+      <p class="end-par" slot="end">50</p>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list *ngIf="selectStatus == 'three'" class="ion-padding notification-profile fisrt-list" lines="inset">
+
+    <ion-item>
+      <ion-avatar class="cotch-img" slot="start">
+        <img src="./assets/img/team/cotach.png">
+        <img class="img-flag" src="./assets/img/team/flag.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+        <p>مهاجم | البرازيل</p>
+      </ion-label>
+
+      <p class="end-par" slot="end">2020</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar class="cotch-img" slot="start">
+        <img src="./assets/img/team/cotach.png">
+        <img class="img-flag" src="./assets/img/team/flag.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+        <p>مهاجم | البرازيل</p>
+      </ion-label>
+      <p class="end-par" slot="end">2020</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar class="cotch-img" slot="start">
+        <img src="./assets/img/team/cotach.png">
+        <img class="img-flag" src="./assets/img/team/flag.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+        <p>مهاجم | البرازيل</p>
+      </ion-label>
+      <p class="end-par" slot="end">2020</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar class="cotch-img" slot="start">
+        <img src="./assets/img/team/cotach.png">
+        <img class="img-flag" src="./assets/img/team/flag.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+        <p>مهاجم | البرازيل</p>
+      </ion-label>
+      <p class="end-par" slot="end">2020</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="selectStatus == 'four'" class="ion-padding notification-profile fisrt-list" lines="inset">
+
+    <ion-item>
+      <ion-avatar class="cotch-img" slot="start">
+        <img src="./assets/img/team/cotach.png">
+        <img class="img-flag" src="./assets/img/team/flag.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+        <p>مهاجم </p>
+      </ion-label>
+
+      <p class="end-par" slot="end">2020</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar class="cotch-img" slot="start">
+        <img src="./assets/img/team/cotach.png">
+        <img class="img-flag" src="./assets/img/team/flag.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+        <p> مهاجم</p>
+      </ion-label>
+      <p class="end-par" slot="end">2020</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar class="cotch-img" slot="start">
+        <img src="./assets/img/team/cotach.png">
+        <img class="img-flag" src="./assets/img/team/flag.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+        <p>مهاجم</p>
+      </ion-label>
+      <p class="end-par" slot="end">2020</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar class="cotch-img" slot="start">
+        <img src="./assets/img/team/cotach.png">
+        <img class="img-flag" src="./assets/img/team/flag.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+        <p>مهاجم</p>
+      </ion-label>
+      <p class="end-par" slot="end">2020</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,2002 @@
+<ion-content [fullscreen]="true">
+  <ion-header class="headerMain">
+    <div class="bg"></div>
+    <div class="overlayer"></div>
+    <div class="d-flex main">
+      <div class="d-flex icons">
+
+        <!-- <ion-buttons start>
+            <ion-button class="headerIcon" routerDirection="forward" >
+              <i class="far fa-bell"></i>
+ 
+            </ion-button>
+          </ion-buttons> -->
+
+      </div>
+
+      <div class="text-center main title">
+        <div>
+          معلومات المبارة
+
+        </div>
+      </div>
+
+      <div class="left d-flex">
+
+        <ion-buttons start>
+          <button class="headerIcon" ion-button>
+            <!-- <img class="notify" src="/assets/icon/search.png" alt="search"> -->
+            <i class="fas fa-share-alt"></i>
+          </button>
+        </ion-buttons>
+      </div>
+
+    </div>
+    <div class="top-header">
+      <div class="row">
+        <div class="col-3 firstTime">
+          <div class="clubLogo">
+            <img src="assets/img/Al_rayyan_doha_qat.png">
+          </div>
+          <div class="clubName">
+            الريان
+          </div>
+        </div>
+        <div class="col-6 legue">
+          <span class="result result1">2</span>
+          <span class="time">06:00</span>
+          <span class="status">جارية الان </span>
+          <div class="legueLogo">
+            <img src="assets/img/team/AFC_Champions_League_crest.png">
+            دورى ابطال اسيا
+
+          </div>
+          <span class="result result2">1</span>
+
+        </div>
+        <div class="col-3 lastTime">
+
+          <div class="clubLogo">
+            <img src="assets/img/Al_rayyan_doha_qat.png">
+
+          </div>
+          <div class="clubName">
+            الريان
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </ion-header>
+  <div id="container">
+    <!-- hr -->
+    <div class="hr">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+        viewBox="0 0 392 1">
+        <defs>
+          <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+            <stop offset="0" stop-color="#fff" stop-opacity="0" />
+            <stop offset="0.498" stop-color="#bdbdbd" />
+            <stop offset="1" stop-color="gray" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+          opacity="0.2" fill="url(#linear-gradient)" />
+      </svg>
+    </div>
+
+    <div class="TVDetails">
+      <span class="channel">
+        <i class="fas fa-tv"></i>
+        bein sport HD1
+      </span>
+      <span class="channel">
+        <i class="fas fa-microphone"></i>
+        عصام الشوالى
+      </span>
+      <span class="channel">
+        <img src="assets/img/team/ice-court.svg">
+        ستاد الدوحة
+      </span>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- hr -->
+    <div class="hr">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+        viewBox="0 0 392 1">
+        <defs>
+          <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+            <stop offset="0" stop-color="#fff" stop-opacity="0" />
+            <stop offset="0.498" stop-color="#bdbdbd" />
+            <stop offset="1" stop-color="gray" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+          opacity="0.2" fill="url(#linear-gradient)" />
+      </svg>
+    </div>
+
+
+
+    <div class="btnsContainer">
+      <button class="btn" (click)="toggleContainer('matchContainer')"
+        [ngClass]="{'btn-danger':changeStatus == 'matchContainer'}">
+        المبارة
+      </button>
+
+      <button class="btn" (click)="toggleContainer('formationContainer')"
+        [ngClass]="{'btn-danger':changeStatus == 'formationContainer'}">
+        التشكيل
+      </button>
+      <button class="btn" (click)="toggleContainer('minuteContainer')"
+        [ngClass]="{'btn-danger':changeStatus == 'minuteContainer'}">
+        دقيقة بدقيقة
+      </button>
+
+      <button class="btn" (click)="toggleContainer('generalLook')"
+        [ngClass]="{'btn-danger':changeStatus == 'generalLook'}">
+        نظرة عامة
+      </button>
+    </div>
+
+
+    <div class="matchContainer" *ngIf="changeStatus == 'matchContainer'">
+
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+
+
+      <div class="secTitle">
+        <i class="fas fa-futbol"></i>
+        أهداف المبارة
+      </div>
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+      <div class="goals">
+        <div class="goalContainer left">
+          <div class="  content clearfix">
+            <span class="goalTime">85</span>
+            <div class="playerImage">
+
+              <img src="assets/img/player1.png">
+              <i class="fas fa-futbol"></i>
+
+            </div>
+
+            <p class="scorrerName">
+              يونس محمود
+              <span class="goalStatus">ضربة جزاء
+
+              </span>
+            </p>
+
+          </div>
+        </div>
+
+
+        <div class="goalContainer right">
+          <div class="  content clearfix">
+            <span class="goalTime">69</span>
+            <div class="playerImage">
+
+              <img src="assets/img/player1.png">
+              <i class="fas fa-futbol"></i>
+
+            </div>
+
+
+            <p class="scorrerName">سبستيان سوريا
+              <span class="goalStatus">ضربة رأس</span>
+            </p>
+
+          </div>
+        </div>
+
+
+        <div class="goalContainer right">
+          <div class="  content clearfix">
+            <span class="goalTime">69</span>
+            <div class="playerImage">
+
+              <img src="assets/img/player1.png">
+              <i class="fas fa-futbol"></i>
+
+            </div>
+
+
+            <p class="scorrerName">سبستيان سوريا
+              <span class="goalStatus">ضربة رأس</span>
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <!-- end goals -->
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+
+
+      <div class="secTitle">
+        <i class="fas fa-chart-line"></i>
+        أحداث المبارة
+      </div>
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+      <div class="events">
+        <div class="text-center matchStatus">
+          <span class="checkMark">
+            <i class="fas fa-check-circle"></i>
+          </span>
+          <span class="status">انتهت المبارة</span>
+        </div>
+
+        <div class="goals ">
+          <div class="goalContainer left">
+            <div class="  content clearfix">
+              <span class="goalTime">85</span>
+              <div class="playerImage">
+
+                <img src="assets/img/player1.png">
+                <i class="fas fa-caret-right out"></i>
+
+
+              </div>
+
+
+              <p class="scorrerName">
+                يونس محمود
+                <span class="goalStatus"> خروج </span>
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="goalContainer right">
+            <div class="  content clearfix">
+              <span class="goalTime">69</span>
+              <div class="playerImage">
+
+                <img src="assets/img/player1.png">
+                <i class="fas fa-caret-left in"></i>
+
+              </div>
+
+
+              <p class="scorrerName">سبستيان سوريا
+                <span class="goalStatus">دخول </span>
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="goalContainer right">
+            <div class="  content clearfix">
+              <span class="goalTime">69</span>
+              <div class="playerImage">
+
+                <img src="assets/img/player1.png">
+                <i class="yellowCard"></i>
+
+              </div>
+
+              <p class="scorrerName">سبستيان سوريا
+                <span class="goalStatus">كارت أصفر </span>
+              </p>
+
+            </div>
+          </div>
+
+          <div class="goalContainer right">
+            <div class="  content clearfix">
+              <span class="goalTime">69</span>
+              <div class="playerImage">
+
+                <img src="assets/img/player1.png">
+                <i class="flag">
+                  <img src="assets/img/flag.svg">
+
+                </i>
+
+              </div>
+
+              <p class="scorrerName">سبستيان سوريا
+                <span class="goalStatus"> تسلل</span>
+              </p>
+
+            </div>
+          </div>
+
+          <div class="goalContainer right">
+            <div class="  content clearfix">
+              <span class="goalTime">69</span>
+              <div class="playerImage">
+
+                <img src="assets/img/player1.png">
+                <i class="fas fa-times closed"></i>
+
+              </div>
+
+              <p class="scorrerName">سبستيان سوريا
+                <span class="goalStatus"> هدف ملغى </span>
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center matchStatus mb-3">
+          <button class="btn btn-danger">
+            الشوط الثانى
+          </button>
+        </div>
+
+
+        <div class="goals ">
+          <div class="goalContainer left">
+            <div class="  content clearfix">
+              <span class="goalTime">85</span>
+              <div class="playerImage">
+
+                <img src="assets/img/player1.png">
+                <i class="fas fa-caret-right out"></i>
+
+
+              </div>
+
+
+              <p class="scorrerName">
+                يونس محمود
+                <span class="goalStatus"> خروج </span>
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="goalContainer right">
+            <div class="  content clearfix">
+              <span class="goalTime">69</span>
+              <div class="playerImage">
+
+                <img src="assets/img/player1.png">
+                <i class="fas fa-caret-left in"></i>
+
+              </div>
+
+
+              <p class="scorrerName">سبستيان سوريا
+                <span class="goalStatus">دخول </span>
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="goalContainer right">
+            <div class="  content clearfix">
+              <span class="goalTime">69</span>
+              <div class="playerImage">
+
+                <img src="assets/img/player1.png">
+                <i class="yellowCard"></i>
+
+              </div>
+
+              <p class="scorrerName">سبستيان سوريا
+                <span class="goalStatus">كارت أصفر </span>
+              </p>
+
+            </div>
+          </div>
+
+          <div class="goalContainer right">
+            <div class="  content clearfix">
+              <span class="goalTime">69</span>
+              <div class="playerImage">
+
+                <img src="assets/img/player1.png">
+                <i class="flag">
+                  <img src="assets/img/flag.svg">
+
+                </i>
+
+              </div>
+
+              <p class="scorrerName">سبستيان سوريا
+                <span class="goalStatus"> تسلل</span>
+              </p>
+
+            </div>
+          </div>
+
+          <div class="goalContainer right">
+            <div class="  content clearfix">
+              <span class="goalTime">69</span>
+              <div class="playerImage">
+
+                <img src="assets/img/player1.png">
+                <i class="fas fa-times closed"></i>
+
+              </div>
+
+              <p class="scorrerName">سبستيان سوريا
+                <span class="goalStatus"> هدف ملغى </span>
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center matchStatus mb-3">
+          <button class="btn btn-danger">
+            الشوط الاول
+          </button>
+        </div>
+
+
+        <div class="text-center matchStatus clock">
+          <span class="checkMark">
+            <i class="fas fa-clock"></i>
+          </span>
+          <span class="status">بعد قليل </span>
+        </div>
+
+
+        <div class="text-center matchStatus notYet">
+          <span class="checkMark">
+            <i class="fas fa-hourglass-start"></i>
+          </span>
+          <span class="status">لم تبدأ بعد </span>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+    <!-- end matchContainer -->
+    <div class="formationContainer" *ngIf="changeStatus == 'formationContainer'">
+      <div class="row">
+        <div class="col-4">
+          <!-- hr -->
+          <div class="hr">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="159" height="1"
+              viewBox="0 0 159 1">
+              <defs>
+                <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                  <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                  <stop offset="0.498" stop-color="#bdbdbd" />
+                  <stop offset="1" stop-color="gray" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <rect id="Rectangle_351" data-name="Rectangle 351" width="1" height="159"
+                transform="translate(159) rotate(90)" opacity="0.3" fill="url(#linear-gradient)" />
+            </svg>
+
+          </div>
+
+          <div class="teamFormation">
+            4 - 3 - 3
+          </div>
+
+
+          <!-- hr -->
+          <div class="hr">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="159" height="1"
+              viewBox="0 0 159 1">
+              <defs>
+                <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                  <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                  <stop offset="0.498" stop-color="#bdbdbd" />
+                  <stop offset="1" stop-color="gray" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <rect id="Rectangle_351" data-name="Rectangle 351" width="1" height="159"
+                transform="translate(159) rotate(90)" opacity="0.3" fill="url(#linear-gradient)" />
+            </svg>
+
+          </div>
+        </div>
+
+        <div class="col-4 d-flex mainTitle">
+          <h6 class="title">خطة الفريقين</h6>
+        </div>
+
+
+        <div class="col-4">
+          <!-- hr -->
+          <div class="hr">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="159" height="1"
+              viewBox="0 0 159 1">
+              <defs>
+                <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                  <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                  <stop offset="0.498" stop-color="#bdbdbd" />
+                  <stop offset="1" stop-color="gray" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <rect id="Rectangle_351" data-name="Rectangle 351" width="1" height="159"
+                transform="translate(159) rotate(90)" opacity="0.3" fill="url(#linear-gradient)" />
+            </svg>
+
+          </div>
+
+          <div class="teamFormation">
+            4 - 3 - 3
+          </div>
+
+
+          <!-- hr -->
+          <div class="hr">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="159" height="1"
+              viewBox="0 0 159 1">
+              <defs>
+                <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                  <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                  <stop offset="0.498" stop-color="#bdbdbd" />
+                  <stop offset="1" stop-color="gray" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <rect id="Rectangle_351" data-name="Rectangle 351" width="1" height="159"
+                transform="translate(159) rotate(90)" opacity="0.3" fill="url(#linear-gradient)" />
+            </svg>
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="formationImage">
+        <div class="team1">
+          <i class="fas fa-tshirt goal">
+            <span class="number one">1</span>
+            </i>
+
+
+
+          <div class="defnder four">
+
+            <i class="fas fa-tshirt">
+              <span class="number">12</span>
+
+            </i>
+            <i class="fas fa-tshirt">
+           <span class="number one">
+             3
+           </span>
+
+            </i>
+            <i class="fas fa-tshirt">
+           <span class="number">
+             26
+           </span>
+
+            </i>
+            <i class="fas fa-tshirt">
+           <span class="number">20</span>
+
+            </i>
+          </div>
+
+          <div class="mid three">
+
+            <i class="fas fa-tshirt">
+           <span class="number">20</span>
+
+            </i>
+            <i class="fas fa-tshirt">
+           <span class="number">20</span>
+
+            </i>
+            <i class="fas fa-tshirt">
+           <span class="number">20</span>
+
+            </i>
+           
+          </div>
+
+
+          <div class="forword three">
+
+            <i class="fas fa-tshirt">
+              <span class="number">20</span>
+   
+               </i>
+               <i class="fas fa-tshirt">
+                <span class="number">20</span>
+     
+                 </i>
+
+                 <i class="fas fa-tshirt">
+                  <span class="number">20</span>
+       
+                   </i>
+   
+ 
+          </div>
+
+        </div>
+
+        <div class="team2">
+          <i class="fas fa-tshirt goal">
+           <span class="number one">1</span>
+          </i>
+          <div class="defnder four">
+
+            <i class="fas fa-tshirt">
+              <span class="number">12</span>
+
+            </i>
+            <i class="fas fa-tshirt">
+           <span class="number one">
+             3
+           </span>
+
+            </i>
+            <i class="fas fa-tshirt">
+           <span class="number">
+             26
+           </span>
+
+            </i>
+            <i class="fas fa-tshirt">
+           <span class="number">20</span>
+
+            </i>
+          </div>
+
+          <div class="mid">
+
+            <i class="fas fa-tshirt">
+           <span class="number">20</span>
+
+            </i>
+            <i class="fas fa-tshirt">
+           <span class="number">20</span>
+
+            </i>
+            <i class="fas fa-tshirt">
+           <span class="number">20</span>
+
+            </i>
+            <i class="fas fa-tshirt">
+              <span class="number">20</span>
+   
+               </i>
+          </div>
+
+
+          <div class="forword">
+
+            <i class="fas fa-tshirt">
+              <span class="number">20</span>
+   
+               </i>
+               <i class="fas fa-tshirt">
+                <span class="number">20</span>
+     
+                 </i>
+ 
+          </div>
+        </div>
+        <!-- <img src="assets/img/format.png"> -->
+      </div>
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+      <div class="secTitle">
+        <i class="fas fa-tshirt"></i>
+        التشكيل الاساسي
+      </div>
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+      <div class="row teamMembers">
+        <div class="col-6">
+          <div class="playerInfo d-flex">
+            <div>
+
+              <span class="name">عبده عوض</span>
+              <span class="inf">حارس مرمى </span>
+
+            </div>
+            <i class="fas fa-tshirt tshirt">
+              <span class="playerNumber">
+                1
+              </span>
+            </i>
+
+          </div>
+
+          <div class="playerInfo d-flex">
+            <div>
+
+              <span class="name">عبده عوض</span>
+              <span class="inf">حارس مرمى </span>
+
+            </div>
+            <i class="fas fa-tshirt tshirt">
+              <span class="playerNumber">
+                1
+              </span>
+            </i>
+
+          </div>
+
+          <div class="playerInfo d-flex">
+            <div>
+
+              <span class="name">عبده عوض</span>
+              <span class="inf">حارس مرمى </span>
+
+            </div>
+            <i class="fas fa-tshirt tshirt">
+              <span class="playerNumber">
+                1
+              </span>
+            </i>
+
+          </div>
+
+        </div>
+        <div class="striper"></div>
+        <div class="col-6">
+
+          <div class="playerInfo d-flex">
+            <div>
+
+              <span class="name">عبده عوض</span>
+              <span class="inf">حارس مرمى </span>
+
+            </div>
+            <i class="fas fa-tshirt tshirt red">
+              <span class="playerNumber">
+                11
+              </span>
+            </i>
+
+          </div>
+
+          <div class="playerInfo d-flex">
+            <div>
+
+              <span class="name">عبده عوض</span>
+              <span class="inf">حارس مرمى </span>
+
+            </div>
+            <i class="fas fa-tshirt tshirt red">
+              <span class="playerNumber">
+                11
+              </span>
+            </i>
+
+          </div>
+          <div class="playerInfo d-flex">
+            <div>
+
+              <span class="name">عبده عوض</span>
+              <span class="inf">حارس مرمى </span>
+
+            </div>
+            <i class="fas fa-tshirt tshirt red">
+              <span class="playerNumber">
+                11
+              </span>
+            </i>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- end teamMembers -->
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+      <div class="secTitle">
+        <i class="fas fa-random"></i>
+        البدلاء
+      </div>
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+      <div class="row teamMembers">
+        <div class="col-6">
+          <div class="playerInfo d-flex">
+            <div>
+
+              <span class="name">عبده عوض</span>
+              <span class="inf">حارس مرمى </span>
+
+            </div>
+            <i class="fas fa-tshirt tshirt">
+              <span class="playerNumber">
+                1
+              </span>
+            </i>
+
+          </div>
+
+          <div class="playerInfo d-flex">
+            <div>
+
+              <span class="name">عبده عوض</span>
+              <span class="inf">حارس مرمى </span>
+
+            </div>
+            <i class="fas fa-tshirt tshirt">
+              <span class="playerNumber">
+                1
+              </span>
+            </i>
+
+          </div>
+
+          <div class="playerInfo d-flex">
+            <div>
+
+              <span class="name">عبده عوض</span>
+              <span class="inf">حارس مرمى </span>
+
+            </div>
+            <i class="fas fa-tshirt tshirt">
+              <span class="playerNumber">
+                1
+              </span>
+            </i>
+
+          </div>
+
+        </div>
+        <div class="striper"></div>
+        <div class="col-6">
+
+          <div class="playerInfo d-flex">
+            <div>
+
+              <span class="name">عبده عوض</span>
+              <span class="inf">حارس مرمى </span>
+
+            </div>
+            <i class="fas fa-tshirt tshirt red">
+              <span class="playerNumber">
+                11
+              </span>
+            </i>
+
+          </div>
+
+          <div class="playerInfo d-flex">
+            <div>
+
+              <span class="name">عبده عوض</span>
+              <span class="inf">حارس مرمى </span>
+
+            </div>
+            <i class="fas fa-tshirt tshirt red">
+              <span class="playerNumber">
+                11
+              </span>
+            </i>
+
+          </div>
+          <div class="playerInfo d-flex">
+            <div>
+
+              <span class="name">عبده عوض</span>
+              <span class="inf">حارس مرمى </span>
+
+            </div>
+            <i class="fas fa-tshirt tshirt red">
+              <span class="playerNumber">
+                11
+              </span>
+            </i>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- end formationContainer -->
+
+    <div class="minuteContainer" *ngIf="changeStatus == 'minuteContainer'">
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+      <div class="minuteCont clearfix">
+
+        <div class="minute">
+          <span class="additional">+3</span>
+          90
+        </div>
+        <span class="title">
+          انتهت المبارة
+        </span>
+        <span class="share">
+          <i class="fas fa-share-alt"></i>
+        </span>
+      </div>
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+      <div class="minuteCont clearfix">
+
+        <div class="minute">
+          89
+        </div>
+
+        <div class="minute minRed">
+          89
+        </div>
+        <span class="title">
+          وقت محتسب بدل ضائع
+          <span class="red">
+            (3 دقائق)
+          </span>
+        </span>
+        <span class="share">
+          <i class="fas fa-share-alt"></i>
+        </span>
+      </div>
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+      <div class="minuteCont clearfix">
+
+        <div class="minute">
+          88
+        </div>
+
+
+        <span class="title">
+          التبديل الثالت لفريق الريان
+
+          <div class="minuteDetails">
+
+
+            <div class="goalContainer">
+              <div class="content clearfix d-flex">
+                <div class="playerImage">
+
+                  <img src="assets/img/player1.png">
+                  <i class="fas fa-caret-right out"></i>
+
+
+                </div>
+
+
+                <p class="scorrerName">سبستيان سوريا
+                  <span class="goalStatus">خروج </span>
+                </p>
+
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="minuteDetails">
+
+
+            <div class="goalContainer">
+              <div class="content clearfix d-flex">
+                <div class="playerImage">
+
+                  <img src="assets/img/player1.png">
+                  <i class="fas fa-caret-right out"></i>
+
+
+                </div>
+
+
+                <p class="scorrerName">سبستيان سوريا
+                  <span class="goalStatus">خروج </span>
+                </p>
+
+              </div>
+            </div>
+
+
+          </div>
+
+        </span>
+
+
+        <span class="share">
+          <i class="fas fa-share-alt"></i>
+        </span>
+      </div>
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+      <div class="minuteCont clearfix">
+
+        <div class="minute">
+          88
+        </div>
+
+
+        <span class="title">
+          التبديل الثالت لفريق الريان
+
+          <div class="minuteDetails">
+
+
+            <div class="goalContainer">
+              <div class="content clearfix d-flex">
+                <div class="playerImage">
+
+                  <img src="assets/img/player1.png">
+                  <i class="fas fa-caret-right out"></i>
+
+
+                </div>
+
+
+                <p class="scorrerName">سبستيان سوريا
+                  <span class="goalStatus">خروج </span>
+                </p>
+
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="minuteDetails">
+
+
+            <div class="goalContainer">
+              <div class="content clearfix d-flex">
+                <div class="playerImage">
+
+                  <img src="assets/img/player1.png">
+                  <i class="fas fa-caret-right out"></i>
+
+
+                </div>
+
+
+                <p class="scorrerName">سبستيان سوريا
+                  <span class="goalStatus">خروج </span>
+                </p>
+
+              </div>
+            </div>
+
+
+          </div>
+
+        </span>
+
+
+        <span class="share">
+          <i class="fas fa-share-alt"></i>
+        </span>
+      </div>
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+      <div class="minuteCont clearfix">
+
+        <div class="minute">
+          88
+        </div>
+
+
+        <span class="title">
+          <span class="mainTitle">
+
+            ارسلت الكرة الى منطقه الجزاء ولكن مرت بدون اى خطورة
+          </span>
+          <div class="clubLogo">
+            <img src="assets/img/team/teamLogo.png">
+            الريان
+          </div>
+
+        </span>
+
+
+        <span class="share">
+          <i class="fas fa-share-alt"></i>
+        </span>
+      </div>
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+    </div>
+    <!-- end minuteContainer -->
+
+
+
+    <div class="minuteContainer generalLook" *ngIf="changeStatus == 'generalLook'">
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+      <div class="secTitle clearfix">
+        <i class="fas fa-exchange-alt"></i>
+        ترتيب الفريقين فى الجموعة
+      </div>
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+      <div class="teamOrder">
+        <div class="row col-12 orderHeader">
+          <p class="title col-6"> الترتيب </p>
+          <div class="row col-6" style="padding: 0;">
+
+            <div class="col-3"> لعب</div>
+            <div class="col-3"> له</div>
+            <div class="col-3"> عليه </div>
+            <div class="col-3">نقاط</div>
+
+          </div>
+        </div>
+
+        <div class="col-12 row mainRow">
+          <div class="clubRow col-6">
+
+            <span class="order"> 1 </span>
+
+            <div class="clubDetails">
+              <img src="assets/img/Al_rayyan_doha_qat.png">
+              <span class="clubName">
+                الريان
+              </span>
+            </div>
+          </div>
+
+
+          <div class="row col-6 pointsRow">
+
+            <div class="col-3"> 3</div>
+            <div class="col-3"> 8</div>
+            <div class="col-3"> 3 </div>
+            <div class="col-3">9</div>
+
+          </div>
+
+        </div>
+
+
+
+
+        <div class="col-12 row mainRow">
+          <div class="clubRow col-6">
+
+            <span class="order"> 1 </span>
+
+            <div class="clubDetails">
+              <img src="assets/img/Al_rayyan_doha_qat.png">
+              <span class="clubName">
+                الريان
+              </span>
+            </div>
+          </div>
+
+
+          <div class="row col-6 pointsRow">
+
+            <div class="col-3"> 3</div>
+            <div class="col-3"> 8</div>
+            <div class="col-3"> 3 </div>
+            <div class="col-3">9</div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+
+    
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+      <div class="secTitle">
+        <i class="fas fa-chart-line"></i>
+
+        احصائيات الاعبين
+      </div>
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+
+
+
+            <!-- hr -->
+            <div class="hr">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+                viewBox="0 0 392 1">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      
+                    <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                    <stop offset="0.498" stop-color="#bdbdbd" />
+                    <stop offset="1" stop-color="gray" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+                  opacity="0.2" fill="url(#linear-gradient)" />
+              </svg>
+            </div>
+            <div class="playerStatc">
+            <div class="row">
+              <div class="col-4 firstTime">
+                <div class="clubLogo">
+                  <img class="playerImg" src="assets/img/player.png">
+                  <img class="clubMinLogo" src="assets/img/Al_rayyan_doha_qat.png">
+                </div>
+                <div class="clubName">
+                  سبستيان سوريا
+                </div>
+                <span class="result">2</span>
+              </div>
+              <div class="col-4 legue">
+               
+                <span class="btn status">اهداف</span>
+ 
+              </div>
+              <div class="col-4 lastTime">
+ 
+                <div class="clubLogo">
+                  <img class="playerImg" src="assets/img/player.png">
+                  <img class="clubMinLogo" src="assets/img/Al_rayyan_doha_qat.png">
+                </div>
+                <div class="clubName">
+                  سبستيان سوريا
+
+                </div>
+                <span class="result">1</span>
+ 
+              </div>
+ 
+            </div>
+          </div>
+
+
+            <!-- hr -->
+            <div class="hr">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+                viewBox="0 0 392 1">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      
+                    <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                    <stop offset="0.498" stop-color="#bdbdbd" />
+                    <stop offset="1" stop-color="gray" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+                  opacity="0.2" fill="url(#linear-gradient)" />
+              </svg>
+            </div>
+      
+
+            
+
+
+            <!-- hr -->
+            <div class="hr">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+                viewBox="0 0 392 1">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      
+                    <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                    <stop offset="0.498" stop-color="#bdbdbd" />
+                    <stop offset="1" stop-color="gray" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+                  opacity="0.2" fill="url(#linear-gradient)" />
+              </svg>
+            </div>
+            <div class="playerStatc">
+            <div class="row">
+              <div class="col-4 firstTime">
+                <div class="clubLogo">
+                  <img class="playerImg" src="assets/img/player.png">
+                  <img class="clubMinLogo" src="assets/img/Al_rayyan_doha_qat.png">
+                </div>
+                <div class="clubName">
+                  سبستيان سوريا
+                </div>
+                <span class="result">2</span>
+              </div>
+              <div class="col-4 legue">
+               
+                <span class="btn status">اهداف</span>
+ 
+              </div>
+              <div class="col-4 lastTime">
+ 
+                <div class="clubLogo">
+                  <img class="playerImg" src="assets/img/player.png">
+                  <img class="clubMinLogo" src="assets/img/Al_rayyan_doha_qat.png">
+                </div>
+                <div class="clubName">
+                  سبستيان سوريا
+
+                </div>
+                <span class="result">1</span>
+ 
+              </div>
+ 
+            </div>
+          </div>
+
+          
+            <!-- hr -->
+            <div class="hr">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+                viewBox="0 0 392 1">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      
+                    <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                    <stop offset="0.498" stop-color="#bdbdbd" />
+                    <stop offset="1" stop-color="gray" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+                  opacity="0.2" fill="url(#linear-gradient)" />
+              </svg>
+            </div>
+
+
+                  <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+      <div class="secTitle">
+        <i class="fas fa-signal"></i>
+
+        احصائيات المبارة
+      </div>
+
+      <!-- hr -->
+      <div class="hr">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+          viewBox="0 0 392 1">
+          <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+              <stop offset="0" stop-color="#fff" stop-opacity="0" />
+              <stop offset="0.498" stop-color="#bdbdbd" />
+              <stop offset="1" stop-color="gray" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+            opacity="0.2" fill="url(#linear-gradient)" />
+        </svg>
+      </div>
+
+
+      
+            <!-- hr -->
+            <div class="hr">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+                viewBox="0 0 392 1">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      
+                    <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                    <stop offset="0.498" stop-color="#bdbdbd" />
+                    <stop offset="1" stop-color="gray" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+                  opacity="0.2" fill="url(#linear-gradient)" />
+              </svg>
+            </div>
+            <div class="mathcStatc">
+            <div class="row">
+              <div class="col-4 left">
+               60%
+              </div>
+              <div class="col-4 type">
+               
+               الاستحواذ
+ 
+              </div>
+              <div class="col-4 right">
+ 
+                40%
+              </div>
+ 
+            </div>
+          </div>
+
+          
+            <!-- hr -->
+            <div class="hr">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+                viewBox="0 0 392 1">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      
+                    <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                    <stop offset="0.498" stop-color="#bdbdbd" />
+                    <stop offset="1" stop-color="gray" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+                  opacity="0.2" fill="url(#linear-gradient)" />
+              </svg>
+            </div>
+
+
+            <!-- hr -->
+            <div class="hr">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+                viewBox="0 0 392 1">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      
+                    <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                    <stop offset="0.498" stop-color="#bdbdbd" />
+                    <stop offset="1" stop-color="gray" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+                  opacity="0.2" fill="url(#linear-gradient)" />
+              </svg>
+            </div>
+            <div class="mathcStatc">
+            <div class="row">
+              <div class="col-4 left">
+               60%
+              </div>
+              <div class="col-4 type">
+               
+               الاستحواذ
+ 
+              </div>
+              <div class="col-4 right">
+ 
+                40%
+              </div>
+ 
+            </div>
+          </div>
+
+          
+            <!-- hr -->
+            <div class="hr">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+                viewBox="0 0 392 1">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      
+                    <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                    <stop offset="0.498" stop-color="#bdbdbd" />
+                    <stop offset="1" stop-color="gray" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+                  opacity="0.2" fill="url(#linear-gradient)" />
+              </svg>
+            </div>
+
+
+
+            <!-- hr -->
+            <div class="hr">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+                viewBox="0 0 392 1">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      
+                    <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                    <stop offset="0.498" stop-color="#bdbdbd" />
+                    <stop offset="1" stop-color="gray" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+                  opacity="0.2" fill="url(#linear-gradient)" />
+              </svg>
+            </div>
+            <div class="mathcStatc">
+            <div class="row">
+              <div class="col-4 left">
+               60%
+              </div>
+              <div class="col-4 type">
+               
+               الاستحواذ
+ 
+              </div>
+              <div class="col-4 right">
+ 
+                40%
+              </div>
+ 
+            </div>
+          </div>
+
+          
+            <!-- hr -->
+            <div class="hr">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+                viewBox="0 0 392 1">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      
+                    <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                    <stop offset="0.498" stop-color="#bdbdbd" />
+                    <stop offset="1" stop-color="gray" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+                  opacity="0.2" fill="url(#linear-gradient)" />
+              </svg>
+            </div>
+
+
+            
+   <div class="btnsContainer single">
+    <button  class="btn btn-danger">
+       عرض الكل 
+    </button>        
+  </div>
+
+
+          <!-- hr -->
+          <div class="hr">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+              viewBox="0 0 392 1">
+              <defs>
+                <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+    
+                  <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                  <stop offset="0.498" stop-color="#bdbdbd" />
+                  <stop offset="1" stop-color="gray" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+                opacity="0.2" fill="url(#linear-gradient)" />
+            </svg>
+          </div>
+    
+          <div class="secTitle">
+            <i class="fas fa-backward"></i>
+    
+              اللقاءات السابقة بين الفريقين
+          </div>
+    
+          <!-- hr -->
+          <div class="hr">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+              viewBox="0 0 392 1">
+              <defs>
+                <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+    
+                  <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                  <stop offset="0.498" stop-color="#bdbdbd" />
+                  <stop offset="1" stop-color="gray" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+                opacity="0.2" fill="url(#linear-gradient)" />
+            </svg>
+          </div>
+          <div class="headerMain lastSec">
+
+          <div class="top-header">
+            <div class="row">
+              <div class="col-4 firstTime">
+                <div class="clubLogo d-flex">
+                  <div class="clubName">
+                    الريان
+                  </div>
+                  <img src="assets/img/Al_rayyan_doha_qat.png">
+                </div>
+                
+              </div>
+              <div class="col-4 legue">
+                <span class="result result1">2</span>
+                <span class="time">10 - 10 - 2019</span>
+                <span class="status">انتهت  </span>
+                <div class="legueLogo">
+                  <img src="assets/img/team/AFC_Champions_League_crest.png">
+                  دورى ابطال اسيا
+      
+                </div>
+                <span class="result result2">1</span>
+      
+              </div>
+              <div class="col-4 lastTime">
+      
+                <div class="clubLogo  d-flex">
+                  <div class="clubName">
+                    الريان
+                  </div>
+                  <img src="assets/img/Al_rayyan_doha_qat.png">
+      
+                </div>
+               
+      
+              </div>
+      
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <!-- end genralLook -->
+
+  </div>
+
+
+
+
+</ion-content>

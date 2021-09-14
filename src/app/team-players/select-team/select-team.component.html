@@ -1,0 +1,34 @@
+ <app-header headerTitle="select-team"></app-header>
+
+ <ion-content class="setting-content" [fullscreen]="true">
+     <ion-list class="ion-padding notification-profile" lines="inset">
+         <ion-item>
+             <ion-avatar slot="start">
+                 <img src="./assets/img/team/teamLogo.png">
+             </ion-avatar>
+             <ion-label>
+                 <h3>الريان القطري</h3>
+             </ion-label>
+             <ion-checkbox mode="ios" [checked]="isChecked" slot="end"></ion-checkbox>
+         </ion-item>
+         <ion-item>
+             <ion-avatar slot="start">
+                 <img src="./assets/img/team/teamLogo.png">
+             </ion-avatar>
+             <ion-label>
+                 <h3>العربي القطري</h3>
+             </ion-label>
+             <ion-checkbox mode="ios" slot="end"></ion-checkbox>
+         </ion-item>
+         <ion-item>
+             <ion-avatar slot="start">
+                 <img src="./assets/img/team/teamLogo.png">
+             </ion-avatar>
+             <ion-label>
+                 <h3>أم صلال</h3>
+             </ion-label>
+             <ion-checkbox mode="ios" slot="end"></ion-checkbox>
+         </ion-item>
+
+     </ion-list>
+ </ion-content>

@@ -1,0 +1,222 @@
+ <ion-header>
+   <ion-toolbar>
+     <ion-buttons slot="start">
+
+       <ion-menu-toggle class="headerIcon">
+         <img src="/assets/icon/menu.png" alt="menu">
+       </ion-menu-toggle>
+       <ion-button color="light" class="headerIcon">
+         <i class="far fa-bell"></i>
+       </ion-button>
+     </ion-buttons>
+     <ion-title color="light">
+       الفريق الاول
+     </ion-title>
+     <ion-buttons slot="end">
+       <ion-button *ngIf="statusFlag =='players'" color="light" (click)="popPage()">
+         <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+       </ion-button>
+       <ng-container *ngIf="statusFlag !='players'">
+         <ion-button color="light" (click)="searchModal()">
+           <ion-icon slot="icon-only" name="search"></ion-icon>
+         </ion-button>
+         <ion-button color="danger" (click)="presentModal()">
+           <ion-icon slot="icon-only" name="funnel"></ion-icon>
+         </ion-button>
+       </ng-container>
+     </ion-buttons>
+   </ion-toolbar>
+ </ion-header>
+
+ <ion-content class="setting-content" [fullscreen]="true">
+
+   <div class="btnsContainer">
+     <button (click)="changeStatus('players')" [ngClass]="{'btn-active': statusFlag =='players'}" class="btn btn-first">
+       اللاعبين
+     </button>
+
+     <button (click)="changeStatus('movement')" [ngClass]="{'btn-active': statusFlag =='movement'}" class="btn">
+       الإنتقالات
+     </button>
+     <button (click)="changeStatus('coaches')" [ngClass]="{'btn-active': statusFlag =='coaches'}" class="btn next">
+       المدربين
+     </button>
+   </div>
+
+   <ion-list *ngIf="statusFlag =='players'" lines="lines">
+     <ion-item (click)="openPage('team-players/list-scorers')">
+       <ion-label>
+         <h3>قوائم الهدافين </h3>
+       </ion-label>
+       <p slot="end" class="player-num">40</p>
+     </ion-item>
+     <ion-item (click)="openPage('team-players/list-scorers-revers')">
+       <ion-label>
+         <h3>قائمة الهدافين العكسية</h3>
+       </ion-label>
+       <p slot="end" class="player-num">40</p>
+     </ion-item>
+     <ion-item (click)="openPage('team-players/list-scorers-competing')">
+       <ion-label>
+         <h3>قائمة الهدافين في الفرق المنافسة</h3>
+       </ion-label>
+       <p slot="end" class="player-num">40</p>
+     </ion-item>
+     <ion-item (click)="openPage('team-players/foreign-team')">
+       <ion-label>
+         <h3>اللاعبون الأجانب</h3>
+       </ion-label>
+       <p slot="end" class="player-num">40</p>
+     </ion-item>
+     <ion-item (click)="openPage('team-players/local-team')">
+       <ion-label>
+         <h3>اللاعبون المحليين</h3>
+       </ion-label>
+       <p slot="end" class="player-num">40</p>
+     </ion-item>
+     <ion-item (click)="openPage('team-players/current-team')">
+       <ion-label>
+         <h3>اللاعبون الحاليين</h3>
+       </ion-label>
+       <p slot="end" class="player-num">40</p>
+     </ion-item>
+     <ion-item (click)="openPage('team-players/retired-team')">
+       <ion-label>
+         <h3>اللاعبين المعتزلين</h3>
+       </ion-label>
+       <p slot="end" class="player-num">40</p>
+     </ion-item>
+     <ion-item (click)="openPage('team-players/young-team')">
+       <ion-label>
+         <h3>قائمة أصغر اللاعبين</h3>
+       </ion-label>
+       <p slot="end" class="player-num">40</p>
+     </ion-item>
+     <ion-item (click)="openPage('team-players/big-team')">
+       <ion-label>
+         <h3> قائمة أكبر اللاعبين</h3>
+       </ion-label>
+       <p slot="end" class="player-num">40</p>
+     </ion-item>
+   </ion-list>
+
+   <ion-grid *ngIf="statusFlag =='movement'" lines="lines">
+     <ion-row>
+       <ion-col size="12">
+         <div class="first-row">
+           <div>
+             <ion-button class="danger" shape="round">22</ion-button>
+             <p class="first-par first-par1">أعوام</p>
+           </div>
+           <div>
+             <ion-avatar>
+               <img src="./assets/img/team/cotach.png">
+             </ion-avatar>
+           </div>
+           <div>
+             <ion-button class="danger" shape="round">25</ion-button>
+             <p class="first-par first-par1">QAR</p>
+           </div>
+         </div>
+         <div class="second-row">
+           <p>عدنان إبراهيم</p>
+           <p>مهاجم</p>
+         </div>
+         <div class="first-row">
+           <div class="img-row">
+             <ion-avatar>
+               <img src="./assets/img/team/f_team.svg">
+             </ion-avatar>
+             <p class="first-par">الريان ( قطر )</p>
+           </div>
+           <div>
+             <ion-button class="green-btn" shape="round">إنتقال</ion-button>
+           </div>
+           <div class="img-row">
+             <p class="first-par">العربي ( قطر )</p>
+             <ion-avatar>
+               <img src="./assets/img/team/s_team.svg">
+             </ion-avatar>
+           </div>
+         </div>
+         <div class="second-row last-row">
+           <span>22/10/2020</span>
+           <ion-icon src="./assets/img/team/angle.svg"></ion-icon>
+           <span>22/10/2023</span>
+         </div>
+       </ion-col>
+     </ion-row>
+     <ion-row>
+       <ion-col size="12">
+         <div class="first-row">
+           <div>
+             <ion-button class="danger" shape="round">22</ion-button>
+             <p class="first-par first-par1">أعوام</p>
+           </div>
+           <div>
+             <ion-avatar>
+               <img src="./assets/img/team/cotach.png">
+             </ion-avatar>
+           </div>
+           <div>
+             <ion-button class="danger" shape="round">25</ion-button>
+             <p class="first-par first-par1">QAR</p>
+           </div>
+         </div>
+         <div class="second-row">
+           <p>عدنان إبراهيم</p>
+           <p>مهاجم</p>
+         </div>
+         <div class="first-row">
+           <div class="img-row">
+             <ion-avatar>
+               <img src="./assets/img/team/f_team.svg">
+             </ion-avatar>
+             <p class="first-par">الريان ( قطر )</p>
+           </div>
+           <div>
+             <ion-button class="green-btn" shape="round">إنتقال</ion-button>
+           </div>
+           <div class="img-row">
+             <p class="first-par">العربي ( قطر )</p>
+             <ion-avatar>
+               <img src="./assets/img/team/s_team.svg">
+             </ion-avatar>
+           </div>
+         </div>
+         <div class="second-row last-row">
+           <span>22/10/2020</span>
+           <ion-icon src="./assets/img/team/angle.svg"></ion-icon>
+           <span>22/10/2023</span>
+         </div>
+       </ion-col>
+     </ion-row>
+   </ion-grid>
+
+   <ion-list *ngIf="statusFlag =='coaches'" lines="lines">
+     <ion-item (click)="openPage('team-players/cotach-details')">
+       <ion-avatar class="cotch-img" slot="start">
+         <img src="./assets/img/team/cotach.png">
+         <img class="img-flag" src="./assets/img/team/flag.png">
+       </ion-avatar>
+       <ion-label>
+         <h3>دونجا </h3>
+         <p>البرازيل</p>
+       </ion-label>
+       <p slot="end" class="player-num">40</p>
+     </ion-item>
+     <ion-item>
+       <ion-avatar class="cotch-img" slot="start">
+         <img src="./assets/img/team/cotach1.png">
+         <img class="img-flag" src="./assets/img/team/flag.png">
+       </ion-avatar>
+       <ion-label>
+         <h3>دييجو موسيماني </h3>
+         <p>جنوب إفريقيا</p>
+       </ion-label>
+       <p slot="end" class="player-num">40</p>
+     </ion-item>
+
+   </ion-list>
+
+ </ion-content>

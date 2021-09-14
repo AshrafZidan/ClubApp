@@ -1,0 +1,37 @@
+ion-content {
+  --background: var(--ion-color-mainPrimary);
+  .header-container {
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    ion-toolbar {
+      --background: transparent no-repeat fixed center;
+    }
+  }
+  ion-card {
+    --background: transparent;
+    background-image: url("../../../assets/img/team/mask.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0px -2px 10px 0px #0a0a0a3b;
+    --color: var(--ion-color-light);
+    ion-card-subtitle {
+      color: var(--ion-color-light);
+    }
+  }
+  .card-btns {
+    ion-button {
+      background: var(--ion-color-light);
+      border-radius: 100%;
+    }
+    .f-btn {
+      background: var(--ion-color-danger) !important;
+    }
+  }
+}

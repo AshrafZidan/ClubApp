@@ -1,0 +1,16 @@
+ion-toolbar {
+  --background: var(--ion-color-mainPrimary);
+}
+.list-match {
+  padding: 0 0 10px 0;
+  .time,
+  .legueLogo {
+    font-size: 14px;
+    font-weight: normal;
+    color: #919191;
+  }
+
+  .legueLogo {
+    margin-top: 5px;
+  }
+}

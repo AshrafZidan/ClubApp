@@ -1,0 +1,130 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button color="light" (click)="popPage()">
+                <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title color="light">
+            <ion-label class="ion-text-wrap">
+                <h2>كل المواجهات</h2>
+                <ion-text color="light">
+                    <p>15 نتيجة فرز</p>
+                </ion-text>
+            </ion-label>
+
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button color="light" (click)="searchModal()">
+                <ion-icon slot="icon-only" name="search"></ion-icon>
+            </ion-button>
+            <ion-button color="danger" (click)="presentModal()">
+                <ion-icon slot="icon-only" name="funnel"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="setting-content post-details" [fullscreen]="true">
+    <ion-list class="list-match" lines="inset">
+
+        <ion-item>
+            <div class="row">
+                <div class="col-3 firstTime">
+                    <div class="clubLogo">
+                        <img src="./assets/img/Al_rayyan_doha_qat.png">
+                    </div>
+                    <div class="clubName">
+                        الريان
+                    </div>
+                    <span class="result">2</span>
+                </div>
+                <div class="col-6 legue">
+                    <span class="time">18/10/2018</span>
+                    <span class="status status-win">فوز</span>
+                    <div class="legueLogo">
+                        <span>موسم 2018 - 2019</span>
+                    </div>
+                </div>
+                <div class="col-3 lastTime">
+
+                    <div class="clubLogo">
+                        <img src="./assets/img/team/Club_2_logo.svg">
+                    </div>
+                    <div class="clubName">
+                        العربي
+                    </div>
+                    <span class="result">1</span>
+
+                </div>
+
+            </div>
+        </ion-item>
+
+        <ion-item>
+            <div class="row">
+                <div class="col-3 firstTime">
+                    <div class="clubLogo">
+                        <img src="assets/img/Al_rayyan_doha_qat.png">
+                    </div>
+                    <div class="clubName">
+                        الريان
+                    </div>
+                    <span class="result">2</span>
+                </div>
+                <div class="col-6 legue">
+                    <span class="time">18/10/2018</span>
+                    <span class="status status-tied">تعادل</span>
+                    <div class="legueLogo">
+                        <span>موسم 2018 - 2019</span>
+                    </div>
+                </div>
+                <div class="col-3 lastTime">
+
+                    <div class="clubLogo">
+                        <img src="./assets/img/team/Club_2_logo.svg">
+                    </div>
+                    <div class="clubName">
+                        العربي
+                    </div>
+                    <span class="result">1</span>
+
+                </div>
+
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="row">
+                <div class="col-3 firstTime">
+                    <div class="clubLogo">
+                        <img src="assets/img/Al_rayyan_doha_qat.png">
+                    </div>
+                    <div class="clubName">
+                        الريان
+                    </div>
+                    <span class="result">2</span>
+                </div>
+                <div class="col-6 legue">
+                    <span class="time">18/10/2018</span>
+                    <span class="status">هزيمة</span>
+                    <div class="legueLogo">
+                        <span>موسم 2018 - 2019</span>
+                    </div>
+                </div>
+                <div class="col-3 lastTime">
+
+                    <div class="clubLogo">
+                        <img src="./assets/img/team/Club_2_logo.svg">
+                    </div>
+                    <div class="clubName">
+                        العربي
+                    </div>
+                    <span class="result">1</span>
+
+                </div>
+
+            </div>
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>

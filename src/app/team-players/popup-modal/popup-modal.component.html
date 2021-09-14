@@ -1,0 +1,64 @@
+<ion-content class="model-popup-post" [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="header-modal">
+      <ion-col size="12">
+        <p>فرز بواسطة</p>
+        <span>تطبيق</span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="first-row-modal">
+      <ion-col size="12">
+        <p>الموسم الرياضي</p>
+        <ion-item>
+          <ion-button class="years-btn" color="danger" shape="round" slot="start">2019</ion-button>
+          <ion-button slot="end" fill="clear">
+            <ion-icon slot="icon-only" src="./assets/img/team/arrow.svg"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="second-row-modal">
+      <ion-col size="12">
+        <p>نتيجة المباراة</p>
+      </ion-col>
+      <ion-col size="4">
+        <ion-item>
+          <ion-checkbox mode="ios" color="danger"></ion-checkbox>
+          <ion-label color="light">فوز</ion-label>
+        </ion-item>
+
+      </ion-col>
+      <ion-col size="4">
+        <ion-item>
+          <ion-checkbox mode="ios" color="danger"></ion-checkbox>
+          <ion-label color="light">هزيمة</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4">
+        <ion-item>
+          <ion-checkbox mode="ios" color="danger"></ion-checkbox>
+          <ion-label color="light">خسارة</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="third-row-modal">
+      <ion-col size="12">
+        <p>تاريخ المباراة</p>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item>
+          <ion-checkbox mode="ios" color="danger"></ion-checkbox>
+          <ion-label color="light">الأحدث للأقدم</ion-label>
+        </ion-item>
+
+      </ion-col>
+      <ion-col size="6">
+        <ion-item>
+          <ion-checkbox mode="ios" color="danger"></ion-checkbox>
+          <ion-label color="light">الأقدم للأحدث</ion-label>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

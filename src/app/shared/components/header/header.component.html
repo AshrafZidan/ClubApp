@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-toggle class="headerIcon">
+        <img src="/assets/icon/menu.png" alt="menu">
+      </ion-menu-toggle>
+      <ion-button color="light" class="headerIcon">
+        <i class="far fa-bell"></i>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="light">{{headerTitle}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="light" (click)="popPage()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>

@@ -1,0 +1,477 @@
+ <ion-content [fullscreen]="true">
+   <ion-header class="headerMain">
+     <div class="bg"></div>
+     <div class="overlayer"></div>
+     <div class="d-flex main">
+       <div class="d-flex icons">
+         <ion-buttons start (click)="toggleMenu()">
+           <ion-button class="headerIcon">
+             <img src="/assets/icon/menu.svg" alt="menu">
+           </ion-button>
+         </ion-buttons>
+
+
+         <ion-buttons start>
+           <ion-button class="headerIcon" routerDirection="forward" routerLink="/notifications">
+             <!-- <img class="notify" src="/assets/icon/notifications.png" alt="notification"> -->
+             <i class="far fa-bell"></i>
+
+           </ion-button>
+         </ion-buttons>
+
+       </div>
+       <div class="left d-flex">
+         <ion-buttons start class="centerMatch">
+           <button class="btn btn-danger" routerDirection="forward" routerLink="/matches">
+             <!-- <img class="football" src="/assets/icon/football.png" alt="football"> -->
+             <i class="fas fa-futbol"></i>
+
+             مركز المباريات
+           </button>
+         </ion-buttons>
+         <ion-buttons start>
+           <button class="headerIcon" ion-button>
+             <!-- <img class="notify" src="/assets/icon/search.png" alt="search"> -->
+             <i class="fas fa-search"></i>
+           </button>
+         </ion-buttons>
+       </div>
+
+     </div>
+
+
+
+     <div class="main-slider">
+       <ion-slides pager="true" [options]="slideOpts" pager="false">
+         <!-- *ngFor="let item of firstSlider" -->
+         <ion-slide *ngFor="let item of firstSlider">
+           <!-- <ion-card class="ion-text-center card-container" (click)="openPage('page name')">
+            <ion-row>
+              <ion-col size="12">
+                <img src="assets/img/Rayyan-1.png" alt="package name">
+              </ion-col>
+            </ion-row>
+
+          </ion-card> -->
+
+           <div class="card-container text-center" (click)="openPage('page name')">
+             <div class="row">
+               <div class="col-12">
+                 <img src="assets/img/s2.jpg" alt="package name">
+
+               </div>
+             </div>
+           </div>
+
+         </ion-slide>
+
+       </ion-slides>
+     </div>
+
+   </ion-header>
+
+   <div id="container">
+
+     <div class="btnsContainer">
+       <button class="btn btn-danger">
+         اليوم
+       </button>
+
+       <button class="btn">
+         السايقة
+       </button>
+       <button class="btn next">
+         القادمة
+       </button>
+     </div>
+
+
+
+     <div class="matchSlider">
+       <ion-slides pager="true" [options]="slideOpts" pager="false">
+         <!-- *ngFor="let item of secondSlider" -->
+         <ion-slide *ngFor="let item of firstSlider" (click)="openPage('/matches/matches-info')">
+           <div class="row">
+             <div class="col-3 firstTime">
+               <div class="clubLogo">
+                 <img src="assets/img/Al_rayyan_doha_qat.png">
+               </div>
+               <div class="clubName">
+                 الريان
+               </div>
+               <span class="result">2</span>
+             </div>
+             <div class="col-6 legue">
+               <span class="time">06:00</span>
+               <div class="legueLogo">
+                 <img src="assets/img/cup.png">
+               </div>
+               <span class="status">لم تبدأ</span>
+
+             </div>
+             <div class="col-3 lastTime">
+
+               <div class="clubLogo">
+                 <img src="assets/img/Al_rayyan_doha_qat.png">
+               </div>
+               <div class="clubName">
+                 الريان
+               </div>
+               <span class="result">1</span>
+
+             </div>
+
+           </div>
+
+         </ion-slide>
+
+       </ion-slides>
+     </div>
+
+
+
+     <!-- hr -->
+     <div class="hr">
+       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+         viewBox="0 0 392 1">
+         <defs>
+           <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+             <stop offset="0" stop-color="#fff" stop-opacity="0" />
+             <stop offset="0.498" stop-color="#bdbdbd" />
+             <stop offset="1" stop-color="gray" stop-opacity="0" />
+           </linearGradient>
+         </defs>
+         <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+           opacity="0.2" fill="url(#linear-gradient)" />
+       </svg>
+     </div>
+
+     <div class="clubOrder">
+       <div class="row" style="padding: 10px;">
+         <div class="col-6">
+           <span class="text">
+             ترتيب الفريق الاول فى الدورى
+
+           </span>
+         </div>
+         <div class="col-6">
+           <span class="previousContainer">
+             <i class="fas fa-chevron-up"></i>
+             <span class="previous">
+               جوله 4
+             </span>
+
+           </span>
+           <span class="order">
+             3
+           </span>
+           <span class="nextContainer">
+             <i class="fas fa-chevron-down disabled"></i>
+             <span class="next">
+               جوله 3
+             </span>
+
+           </span>
+         </div>
+
+       </div>
+     </div>
+
+
+     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+       viewBox="0 0 392 1">
+       <defs>
+         <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+           <stop offset="0" stop-color="#fff" stop-opacity="0" />
+           <stop offset="0.498" stop-color="#bdbdbd" />
+           <stop offset="1" stop-color="gray" stop-opacity="0" />
+         </linearGradient>
+       </defs>
+       <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+         opacity="0.2" fill="url(#linear-gradient)" />
+     </svg>
+
+     <div class="lastNwes">
+       <div class="header">
+
+         <h4 class="title">اخر الاخبار</h4>
+         <span class="desc">
+           اخر اخبار الفريق المضافة والمحدثة
+         </span>
+         <span class="arrow" (click)="openPage('/news')">
+           <i class="fas fa-chevron-left"></i>
+         </span>
+       </div>
+
+       <div class="newsSlider">
+
+         <ion-slides pager="true" [options]="slideOpts" pager="false">
+           <!-- *ngFor="let item of firstSlider" -->
+           <ion-slide *ngFor="let item of firstSlider">
+             <ion-card class="ion-text-center card-container" (click)="openPage('/news/news-details')">
+               <ion-row>
+                 <ion-col size="12">
+                   <img src="assets/img/Rayyan-1.png" alt="package name">
+                   <div class="desc">
+                     بعد فوز الريان على ام صلال احتفالات كبيره فى كل المدن
+                     <div class="date">
+                       <span> 25 نوفمبر 2019</span>
+                     </div>
+                   </div>
+                 </ion-col>
+               </ion-row>
+
+             </ion-card>
+           </ion-slide>
+
+         </ion-slides>
+
+       </div>
+
+     </div>
+
+     <!-- hr -->
+     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+       viewBox="0 0 392 1">
+       <defs>
+         <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+           <stop offset="0" stop-color="#fff" stop-opacity="0" />
+           <stop offset="0.498" stop-color="#bdbdbd" />
+           <stop offset="1" stop-color="gray" stop-opacity="0" />
+         </linearGradient>
+       </defs>
+       <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+         opacity="0.2" fill="url(#linear-gradient)" />
+     </svg>
+
+     <div class="lastNwes">
+       <div class="header">
+
+         <h4 class="title">مكتبة الميديا</h4>
+         <span class="desc">
+           مقاطع الفيديو المتعلقة بالفريق
+         </span>
+         <span class="arrow" (click)="openPage('/medialibrary')">
+           <i class="fas fa-chevron-left"></i>
+         </span>
+       </div>
+
+       <div class="newsSlider">
+
+         <ion-slides pager="true" [options]="MediaslideOpts" pager="false">
+
+           <ion-slide *ngFor="let item of mediaSlider">
+             <ion-card class="ion-text-center card-container" (click)="openPage('/medialibrary/media-details')">
+               <ion-row>
+                 <ion-col size="12" class="mediaSlider">
+                   <img src="assets/img/Rayyan-1.png" alt="package name">
+                   <div class="overlayer"></div>
+                   <div class="desc media">
+                     <i class="fas fa-play-circle"></i>
+                     <span class="videoDesc">
+                       عنوان الفيديو يظهر هنا عن محتواه
+                     </span>
+
+                   </div>
+                   <div class="date timeDate time">
+                     <span> 02:00 </span>
+                   </div>
+                 </ion-col>
+               </ion-row>
+
+             </ion-card>
+           </ion-slide>
+
+         </ion-slides>
+
+       </div>
+
+     </div>
+
+
+
+
+     <!-- Gallery -->
+
+     <div class="lastNwes">
+       <div class="header">
+
+         <h4 class="title">مكتبة الصور</h4>
+         <span class="desc">
+           جميع الصور المتعلقة بالفريق
+         </span>
+         <span class="arrow" (click)="openPage('/photogallery')">
+           <i class="fas fa-chevron-left"></i>
+         </span>
+       </div>
+
+       <div class="newsSlider">
+
+         <ion-slides pager="true" [options]="MediaslideOpts" pager="false">
+
+           <ion-slide *ngFor="let item of mediaSlider">
+             <ion-card class="ion-text-center card-container" (click)="openPage('/photogallery/photogallery-detials')">
+               <ion-row>
+                 <ion-col size="12" class="mediaSlider">
+                   <img src="assets/img/Rayyan-1.png" alt="package name">
+                   <div class="overlayer"></div>
+                   <div class="desc media more">
+                     <span class="videoDesc">
+                       <img class="moreImage" src="assets/img/Herve-Renard-634x315.png">
+                       <img class="moreImage" src="assets/img/Herve-Renard-634x315.png">
+                       <img class="moreImage" src="assets/img/Herve-Renard-634x315.png">
+                       <img class="moreImage" src="assets/img/Herve-Renard-634x315.png">
+                       <div class="moreIcon">
+                         <i class="fas fa-ellipsis-h"></i>
+
+                       </div>
+                     </span>
+
+                   </div>
+                   <div class="date timeDate ">
+                     <span> 5/5 </span>
+                   </div>
+                 </ion-col>
+               </ion-row>
+
+             </ion-card>
+           </ion-slide>
+
+         </ion-slides>
+
+       </div>
+
+     </div>
+
+
+
+     <!-- statics -->
+     <div class="card statics">
+       <div class="row">
+         <div class="col-6 pl-5" (click)="openPage('/statistic-match')">
+           <div class="info">
+             <div class="arrow">
+               <i class="fas fa-chevron-left"></i>
+             </div>
+             <div class="icon">
+               <i class="fas fa-chart-line"></i>
+             </div>
+             <span class="title"> احصائيات الفريق </span>
+           </div>
+         </div>
+         <div class="col-6 pr-5">
+           <div class="info redGr" (click)="openPage('/team-players/team-info')">
+             <div class="arrow">
+               <i class="fas fa-chevron-left"></i>
+             </div>
+             <div class="icon">
+               <i class="fas fa-users"></i>
+             </div>
+             <!-- <span class="num">192</span> -->
+             <span class="title"> مجلس الادارة </span>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+     <!-- team members -->
+     <div class="lastNwes">
+       <div class="header">
+
+         <h4 class="title">لاعبو الفريق الاول </h4>
+         <span class="desc">
+           جميع لاعبى الفريق الاول لكرة القدم </span>
+         <span class="arrow" (click)="openPage('/team-players')">
+           <i class="fas fa-chevron-left"></i>
+         </span>
+       </div>
+
+       <div class="newsSlider">
+
+         <ion-slides pager="true" [options]="teamMemberslideOpts" pager="false">
+
+           <ion-slide *ngFor="let item of mediaSlider">
+             <div class="player">
+               <div class="playerImage">
+                 <span class="shirtNumber">
+                   <i class="fas fa-tshirt"></i>
+                   <span class="number">9</span>
+
+                 </span>
+                 <img src="assets/img/player.png" alt="player Name">
+
+
+               </div>
+               <div class="playerInfo">
+                 <h6 class="playerName">سبستيان سوريا</h6>
+                 <span class="position">مهاجم</span>
+               </div>
+             </div>
+           </ion-slide>
+
+         </ion-slides>
+
+       </div>
+
+     </div>
+
+     <!-- hr -->
+     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392" height="1"
+       viewBox="0 0 392 1">
+       <defs>
+         <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+
+           <stop offset="0" stop-color="#fff" stop-opacity="0" />
+           <stop offset="0.498" stop-color="#bdbdbd" />
+           <stop offset="1" stop-color="gray" stop-opacity="0" />
+         </linearGradient>
+       </defs>
+       <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392" transform="translate(392) rotate(90)"
+         opacity="0.2" fill="url(#linear-gradient)" />
+     </svg>
+
+     <!-- participants -->
+     <div class="lastNwes">
+       <div class="header">
+
+         <h4 class="title">المشاركات</h4>
+         <span class="desc">
+           مقاطع الفريق فى البطولات المختلفة
+         </span>
+         <span class="arrow" (click)="openPage('/posts')">
+           <i class="fas fa-chevron-left"></i>
+         </span>
+       </div>
+
+       <div class="newsSlider cup">
+
+         <ion-slides pager="true" [options]="cupSlideOpts" pager="false">
+
+           <ion-slide *ngFor="let item of mediaSlider" (click)="openPage('/posts/posts-detials')">
+             <div class="cupSlider">
+               <div class="cupInfo">
+
+                 <img src="assets/img/cup.png" alt="package name">
+                 <hr>
+                 <span class="cupName">كاس قطر</span>
+
+               </div>
+             </div>
+
+           </ion-slide>
+
+         </ion-slides>
+
+       </div>
+
+     </div>
+
+   </div>
+
+
+
+ </ion-content>

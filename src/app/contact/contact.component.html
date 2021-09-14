@@ -1,0 +1,55 @@
+<app-header headerTitle="Contact Us"></app-header>
+<ion-content class="setting-content contact-content" [fullscreen]="true">
+    <br>
+    <div class="ion-margin custom-fab-btn">
+        <div class="img-contact">
+            <img src="./assets/img/contact/contact.svg" alt="contact">
+            <h3>اذا كان لديك أي استفسار ارسله إلينا وسيتم الرد عليك </h3>
+        </div>
+        <form>
+            <ion-list lines="full">
+                <div class="submit na-input">
+                    <ion-icon class="icon-img-input" src="./assets/img/contact/user-alt.svg"></ion-icon>
+                    <ion-item>
+                        <ion-input type="text" placeholder="الإسم" name="name">
+                        </ion-input>
+                    </ion-item>
+                </div>
+                <div class="submit em-input">
+                    <ion-icon class="icon-img-input" src="./assets/img/contact/envelope-open.svg"></ion-icon>
+                    <ion-item>
+                        <ion-input placeholder="البريد الإلكتروني" type="email" name="email">
+                        </ion-input>
+                    </ion-item>
+                </div>
+
+                <div class="submit ms-input">
+                    <ion-icon class="icon-img-input" src="./assets/img/contact/pen.svg"></ion-icon>
+                    <ion-item class="description">
+                        <ion-textarea rows="5" name="message" placeholder="أدخل نص الرسالة" cols="20">
+                        </ion-textarea>
+                    </ion-item>
+                </div>
+                <div class="send-btn">
+                    <ion-button expand="full" color="danger" shape="round">إرسال رسالة</ion-button>
+                </div>
+
+                <div class="withthrow">
+                    <p>أو من خلال</p>
+                </div>
+
+            </ion-list>
+            <div class="soical-media">
+                <ion-icon src="./assets/img/contact/fac.svg"></ion-icon>
+                <ion-icon src="./assets/img/contact/ins.svg"></ion-icon>
+                <ion-icon src="./assets/img/contact/snap.svg"></ion-icon>
+                <ion-icon src="./assets/img/contact/tw.svg"></ion-icon>
+                <ion-icon src="./assets/img/contact/whats.svg"></ion-icon>
+
+            </div>
+
+        </form>
+    </div>
+
+
+</ion-content>

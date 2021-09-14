@@ -1,0 +1,178 @@
+ion-menu{
+  --width:60%
+}
+ion-menu ion-content {
+  // --background: var(--ion-item-background, var(--ion-background-color, #fff));
+
+   ion-item , ion-list{
+    background:var(--ion-color-mainPrimary); 
+  --background:var(--ion-color-mainPrimary); 
+  }
+
+}
+
+// ion-menu.md ion-content {
+//   --padding-start: 8px;
+//   --padding-end: 8px;
+//   --padding-top: 20px;
+//   --padding-bottom: 20px;
+// }
+
+ion-menu.md ion-list {
+  padding: 20px 0;
+}
+
+ion-menu.md ion-note {
+  margin-bottom: 30px;
+}
+
+ion-menu.md ion-list-header,
+ion-menu.md ion-note {
+  padding-left: 10px;
+}
+
+ion-menu.md ion-list#inbox-list {
+  border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
+}
+
+ion-menu.md ion-list#inbox-list ion-list-header {
+  font-size: 16px;
+  font-weight: 600;
+
+  min-height: 20px;
+}
+
+ion-menu.md ion-list#labels-list ion-list-header {
+  font-size: 16px;
+
+  margin-bottom: 18px;
+
+  color: #757575;
+
+  min-height: 26px;
+}
+
+ion-menu.md ion-item {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  border-radius: 4px;
+}
+
+ion-menu.md ion-item.selected {
+  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+}
+
+ion-menu.md ion-item.selected ion-icon {
+  color: var(--ion-color-primary);
+}
+
+ion-menu.md ion-item ion-icon {
+  color: #616e7e;
+}
+
+ion-menu.md ion-item ion-label {
+  font-weight: 500;
+}
+
+ion-menu.ios ion-list {
+  padding: 20px 0 0 0;
+}
+
+ion-menu.ios ion-note {
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+ion-menu.ios ion-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --min-height: 50px;
+}
+
+ion-menu.ios ion-item.selected ion-icon {
+  color: var(--ion-color-primary);
+}
+
+ion-menu.ios ion-item ion-icon {
+  font-size: 24px;
+  color: #73849a;
+}
+
+ion-menu.ios ion-list#labels-list ion-list-header {
+  margin-bottom: 8px;
+}
+
+ion-menu.ios ion-list-header,
+ion-menu.ios ion-note {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+ion-menu.ios ion-note {
+  margin-bottom: 8px;
+}
+
+ion-note {
+  display: inline-block;
+  font-size: 16px;
+
+  color: var(--ion-color-medium-shade);
+}
+
+ion-item.selected {
+  --color: var(--ion-color-primary);
+}
+.selectedClub{
+  padding: 0 10px;
+  .bordred{
+    border-bottom: 1px solid rgb(255 255 255 / .20);
+    padding-bottom: 8px;
+  }
+  .clubLogo{
+    img{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+
+    }
+  }
+  .clubName{
+    color: #fff;
+    font-size: 17px;
+    margin-top: -10px;
+
+  }
+  .arrow{
+    line-height: 2.4;
+    // margin-top: 7px;
+    flex: 0 0 20%;
+    .fas{
+      color: #c5bfbf;
+      
+    }
+  }
+  .selectClub{
+  color: #c5bfbf;
+  float: right; 
+  padding: 0 20px;
+
+  }
+}
+.menu-icon{
+    color: var(--ion-color-primary);
+
+}
+.menu-title{
+  font-size: 14px;
+  margin-right: 10px;
+  color: #fff;
+}
+#inbox-list{
+  height: 100%;
+  overflow: auto;
+
+}
+.inner-scroll{
+  padding: 0 !important;
+}
+

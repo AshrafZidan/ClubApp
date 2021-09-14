@@ -1,0 +1,33 @@
+#container{
+    padding: 20px 8px;
+    min-height: 100%;
+    .mediaSlider{
+   
+        margin-bottom: 20px;
+        img{
+            height: 200px !important;
+
+        }
+        .desc.media{
+
+            bottom: 3%;
+            .videoDesc{
+                margin-top: 35px;
+                text-align: center;
+            }
+        }
+       
+        .date{
+            span{
+
+                padding: 6px 10px;
+                font-size: 14px;
+                letter-spacing: 1px;
+             }
+        }
+    }
+}
+video , img  {
+height: 270px !important;
+max-height: 270px !important;
+}

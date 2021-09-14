@@ -1,0 +1,54 @@
+ion-slide , ion-slides{
+    height: 100%;
+    width: 100%;
+    .imageContainer{
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        
+    }
+}
+.toolbar {
+    position: absolute;
+    margin-top: 10px;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 15px;
+    z-index: 9;
+    color: #fff;
+    .fas {
+        color: #fff;
+        font-size: 30px;
+        &.fa-share-alt{
+            font-size: 24px;
+            margin: 0 10px 0 0;
+            display: inline-block;
+
+        }
+
+    }
+}
+.date {
+    span {
+      margin-top: 8px;
+      display: inline-block;
+      background: #dc3545;
+      letter-spacing: 4px;
+      padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 15px;
+
+    }
+    &.timeDate {
+      position: absolute;
+      left: 8px;
+      top: 0px;
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }

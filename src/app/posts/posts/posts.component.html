@@ -1,0 +1,28 @@
+ <app-header headerTitle="Posts"></app-header>
+
+ <ion-content class="setting-content" [fullscreen]="true">
+     <ion-list class="ion-padding notification-profile" lines="inset">
+
+         <ion-item (click)="openPage('/posts/posts-detials')">
+             <ion-avatar slot="start">
+                 <img src="./assets/img/posts/post.png">
+             </ion-avatar>
+             <ion-label>
+                 <h3>كأس أمير قطر</h3>
+             </ion-label>
+             <p slot="end">40</p>
+
+         </ion-item>
+
+         <ion-item (click)="openPage('/posts/posts-detials')">
+             <ion-avatar slot="start">
+                 <img src="./assets/img/posts/post.png">
+             </ion-avatar>
+             <ion-label>
+                 <h3>كأس أمير قطر</h3>
+             </ion-label>
+             <p slot="end">40</p>
+         </ion-item>
+
+     </ion-list>
+ </ion-content>

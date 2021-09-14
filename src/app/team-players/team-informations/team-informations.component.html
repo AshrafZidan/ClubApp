@@ -1,0 +1,247 @@
+<ion-content [fullscreen]="true">
+    <ion-header class="headerMain">
+        <div class="bg"></div>
+        <div class="overlayer"></div>
+        <div class="d-flex main">
+            <div class="d-flex icons">
+                <ion-buttons start (click)="toggleMenu()">
+                    <ion-button class="headerIcon">
+                        <img src="/assets/icon/menu.svg" alt="menu">
+                    </ion-button>
+                </ion-buttons>
+
+
+                <ion-buttons start>
+                    <ion-button class="headerIcon" routerDirection="forward" routerLink="/notifications">
+                        <i class="far fa-bell"></i>
+
+                    </ion-button>
+                </ion-buttons>
+
+            </div>
+
+            <div class="text-center main title">
+                <div>
+                    معلومات الفريق
+
+                </div>
+            </div>
+
+            <div class="left d-flex">
+
+                <ion-buttons start>
+                    <button class="headerIcon" ion-button>
+                        <!-- <img class="notify" src="/assets/icon/search.png" alt="search"> -->
+                        <i class="fas fa-search"></i>
+                    </button>
+                </ion-buttons>
+            </div>
+
+        </div>
+        <div class="top-header">
+            <div class="clubInfo">
+
+                <div class="clubLogo">
+                    <img src="assets/img/team/teamLogo.png" alt="clubLogo">
+                </div>
+                <span class="clubName">الريان القطرى</span>
+            </div>
+            <div class="clubInfo">
+                <div class="row data">
+                    <div class="col-5-c date">
+                        <i class="far fa-calendar"></i>
+                        تأسس عام 1935
+                    </div>
+                    <div class="col-2-c">
+                        <span class="dilmeter"></span>
+                    </div>
+                    <div class="col-5-c site">
+                        <i class="fas fa-globe"></i>
+                        www.alryan.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-header>
+    <div class="clearfix"></div>
+    <div id="container">
+        <div class="btnsContainer text-center">
+            <button (click)="toggleDivs('current')" class="btn current"
+                [ngClass]="{'btn-danger':currentMangerContainer}">
+                مجلس الاداره الحالى
+            </button>
+            <button (click)="toggleDivs('last')" class="btn last" [ngClass]="{'btn-danger':lastMangerContainer}">
+                الروساء السابقين
+            </button>
+
+        </div>
+        <div *ngIf="currentMangerContainer" class="current">
+            <div class="mangerContainer">
+                <div class="mangerImage">
+                    <img src="assets/img/Team-info/manger.png" alt="mangerImage">
+                </div>
+                <div class="mangerName">
+                    فهد الغامدى
+                </div>
+                <div class="jobTitle">
+                    رئيس مجلس الادارة
+                </div>
+                <div class="times" #toggleButton (click)="showTimesDetails()">
+                    <i class="fas fa-redo"></i>
+                    عدد الولايات : 2
+                </div>
+            </div>
+
+            <div class="non-semantic-protector">
+                <h1 class="ribbon">
+                    <strong class="ribbon-content">اعضاء مجلس الادارة</strong>
+                </h1>
+            </div>
+
+            <div class="members">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="mangerContainer">
+                            <div class="mangerImage">
+                                <img src="assets/img/Team-info/manger.png" alt="mangerImage">
+                            </div>
+                            <div class="mangerName">
+                                فهد الغامدى
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mangerContainer">
+                            <div class="mangerImage">
+                                <img src="assets/img/Team-info/manger.png" alt="mangerImage">
+                            </div>
+                            <div class="mangerName">
+                                فهد الغامدى
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mangerContainer">
+                            <div class="mangerImage">
+                                <img src="assets/img/Team-info/manger.png" alt="mangerImage">
+                            </div>
+                            <div class="mangerName">
+                                فهد الغامدى
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="lastMangerContainer" class="lastManger">
+            <div class="row">
+                <div class="col-6">
+
+                    <div class="mangerContainer">
+                        <div class="mangerImage">
+                            <img src="assets/img/Team-info/manger.png" alt="mangerImage">
+                        </div>
+                        <div class="mangerName">
+                            فهد الغامدى
+                        </div>
+                        <div class="jobTitle">
+                            رئيس مجلس الادارة
+                        </div>
+                        <div class="times">
+                            <i class="fas fa-redo"></i>
+                            عدد الولايات : 2
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div *ngIf="showTimeDetails" #timeDetails class="timeDetails">
+
+            <div class="mangerContainer">
+                <div class="mangerImage">
+                    <img src="assets/img/Team-info/manger.png" alt="mangerImage">
+                    <span class="time">2</span>
+                </div>
+                <div class="mangerName">
+                    فهد الغامدى
+                </div>
+                <div class="jobTitle">
+                    رئيس مجلس الادارة
+                </div>
+
+                <!-- hr -->
+                <div class="hr">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="392"
+                        height="1" viewBox="0 0 392 1">
+                        <defs>
+                            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1"
+                                gradientUnits="objectBoundingBox">
+
+                                <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                                <stop offset="0.498" stop-color="#bdbdbd" />
+                                <stop offset="1" stop-color="gray" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                        <rect id="Rectangle_53" data-name="Rectangle 53" width="1" height="392"
+                            transform="translate(392) rotate(90)" opacity="0.2" fill="url(#linear-gradient)" />
+                    </svg>
+                </div>
+                <div class="allTimes">
+                    <div class="times">
+                        <div class="time">
+                            <span>1</span>
+                            <p class="value"> الولايه الاولى </p>
+                        </div>
+                        <div class="duration">
+                            2012-2016
+                        </div>
+
+                    </div>
+
+
+                    <div class="times">
+                        <div class="time">
+                            <span>1</span>
+                            <p class="value"> الولايه الاولى </p>
+                        </div>
+                        <div class="duration">
+                            2012-2016
+                        </div>
+
+                    </div>
+
+
+                    <div class="times">
+                        <div class="time">
+                            <span>1</span>
+                            <p class="value"> الولايه الاولى </p>
+                        </div>
+                        <div class="duration">
+                            2012-2016
+                        </div>
+
+                    </div>
+
+                    <div class="times">
+                        <div class="time">
+                            <span>2</span>
+                            <p class="value"> الولايه الثانيه </p>
+                        </div>
+                        <div class="duration">
+                            2012-2016
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</ion-content>

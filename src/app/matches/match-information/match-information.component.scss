@@ -1,0 +1,1044 @@
+ .headerMain {
+    position: relative;
+    &.lastSec{
+        margin-top: 20px;
+        .clubLogo{
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            .clubName{
+                font-size: 17px;
+                color: #fff;
+                margin: 0px 3px !important;
+            }
+        }
+        .legue{
+            padding: 0 !important;
+            .result{
+                top: 34% !important;
+                &.result1{
+                    right: -4px !important;
+    
+                }
+                &.result2{
+                    left: -4px !important;
+    
+                }
+
+            }
+           
+            .time{
+                 font-size: 15px !important;
+                color: #8f8d8d !important;
+                margin-top: 10px;
+            }
+
+        }
+
+    }
+    .top-header{
+        text-align: center;
+        color: #fff;
+        .clubLogo{
+            img{
+            width: 50px;
+            height: auto;
+            }
+        }
+        .legue{
+            position: relative;
+            .result{
+                position: absolute;
+                left: 10px;
+                top: 34%;
+                background: #000;
+                font-size: 18px;
+                font-weight: bold;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                border-radius: 100%;
+                &.result1{
+                    left: auto;
+                     right: 10px;
+                }
+
+            }
+            .status{
+                display: inline-block;
+                margin: 8px 0;
+                background:#bd2130;
+                width: auto;
+                padding: 5px 10px;
+                border-radius: 15px;
+            }
+        .time{
+            display: block;
+            font-size: 18px;
+        }
+        .legueLogo{
+            img{
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+    }
+    .bg{
+        background-image: url("/assets/img/team/staduim.png");
+        background-size: 100% 100%;
+        z-index: 0;
+    
+    
+        }
+        .overlayer{
+            background: rgba(0, 0, 0,1);
+            z-index: -1;
+
+
+        }
+
+     .main {
+         .title{
+            padding: 15px 5px;
+            div{
+                font-size: 19px;
+
+            }
+
+         }
+        .left
+    {
+     i{
+        font-size: 21px;
+
+    }
+    }
+}
+}
+#container{
+    padding: 0;
+    margin-top: -10px;
+    height: auto;
+
+    .btnsContainer {
+        display: flex;
+    justify-content: space-around;
+    padding: 0 10px;
+    margin: 7px 0;
+
+        .btn{
+            border-radius: 20px;
+            color: #fff;
+            border: 1px solid;
+            position: relative;
+            font-size: 13px;
+            padding: 6px;
+            &.btn-danger{
+                border-color: #bd2130;
+            border-radius: 20px !important;
+
+            }
+        }
+    }
+.secTitle{
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    i{
+        color: #bd2130;
+        font-size: 20px;
+    }
+}
+.TVDetails{
+    
+    display: flex;
+    justify-content: space-around;
+
+    span{
+        color: #a09e9e;
+        font-size: 16px;
+        text-align: center;
+        i{
+            color: #bd2130;
+            margin: 0 2px;
+
+        }
+    }
+}
+.goals{
+    position: relative;
+    color: #fff;
+    
+    &::after{
+     
+        content: "";
+        position: absolute;
+        width: 1px;
+        background-color: #483f3f;
+
+        top: 15px;
+        bottom: 20px;
+        left: 50%;
+    }
+    .goalContainer{
+        padding: 10px 25px;
+        position: relative;
+        width: 50%;
+        .playerImage{
+            position: relative;
+            float: left;
+            i{
+                position: absolute;
+                bottom: -4px;
+                right: -4px;
+                &.in{
+                    color: #9F8653;
+                    font-size: 24px;
+                    right: 2px;
+                }
+                &.out{
+                    color: #4C80DB;
+                    font-size: 24px;
+
+                
+
+                }
+                &.redCard{
+                     background: #BF1723;
+                    width: 15px;
+                    height: 17px;
+                }
+                &.yellowCard{
+                    background: #99f91a;
+                    width: 15px;
+                    height: 17px;
+                
+                }
+                &.flag{
+                    bottom: 4px;
+                    img{
+                    width: 15px ;
+                    height: 15px;
+                    }
+
+                }
+                &.closed{
+                    color: #fff;
+                    background:#BF1723;
+                    border-radius: 100%;
+                    padding: 2px 4px;
+                    font-size: 9px;
+                }
+            }
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    }
+/* Place the container to the left */
+&.left {
+    left: 0;
+    padding-right: 8px;
+    padding-left: 30px;
+  
+    .content{
+        flex-direction: row-reverse !important;
+            .goalStatus{
+                text-align: end !important;
+                margin: 0 5px;
+
+            }
+    }
+  }
+ 
+  .goalStatus{
+      color: #a09e9e;
+      display: block;
+  }
+  .scorrerName{
+     float: left;
+    font-size: 11px;
+    color: #fff;
+    padding: 0 4px;
+
+  }
+  .goalTime{
+    position: absolute;
+    background: #000;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 100%;
+    text-align: center;
+    left: -10%;
+    z-index: 9;
+  }
+   
+  /* Place the container to the right */
+  &.right {
+    right:  50%;
+    padding-left: 0;
+    padding-right: 30px;
+    .playerImage{
+        float: right;
+    }
+    .scorrerName{
+        text-align: start;
+        float: right;
+
+    }
+    .goalTime{
+        right: -10%;
+    left: auto;
+    }
+    .goalStatus{
+        text-align: start;
+        margin: 0 5px;
+
+    }
+  }
+  
+}
+}
+.matchStatus{
+    .btn{
+        border-radius: 20px;
+        font-size: 12px;
+    }
+    .checkMark{
+        background: #dc3545;
+        width: 36px;
+        height: 36px;
+        display: inline-block;
+        line-height: 45px;
+        border-radius: 100%;
+        i{
+            color: #fff;
+            font-size: 23px
+        }
+       
+    }
+    
+    &.notYet{
+        .checkMark{
+        background: #4C80DB;
+
+            
+        }
+        i{
+            font-size: 16px !important;
+
+        }
+        
+    }
+    &.clock{
+        .checkMark{
+        background: #9F8653;
+
+            
+        }
+        &::after{
+                content: "";
+                width: 1px;
+                margin: 15px 0;
+                height: 20px;
+                background-color: #483f3f;
+                display: block;
+                text-align: center;
+                margin: 10px auto;
+        }
+        
+    }
+    .status{
+        color: #a09e9e;
+        display: block;
+    }
+}
+
+
+
+@media (min-width:500px){
+    .hr{
+        svg{
+            width: 100% !important;
+
+        }
+    }
+    .btnsContainer{
+        .btn{
+            width: 22%;
+        }
+}
+.left{
+
+    .goalTime{
+        left: -20px !important;
+        
+    }
+}
+.right{
+    .goalTime{
+        right:  -20px !important;
+        
+    }
+}
+}
+
+
+}
+
+.headerMain .main .icons, .headerMain .main .left, .headerMain .main .title{
+    padding-bottom: 15px;
+}
+
+/* formationContainer */
+.formationContainer{
+    & >div{
+        padding: 0 10px;
+    }
+    .mainTitle{
+        justify-content: center;
+        padding: 0;
+    .title{
+    color: #dc3545;
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+display: flex;  
+    }
+}
+    .hr {
+        text-align: center;
+        svg{
+            width: 120%;
+
+        }
+    }
+    .teamFormation{
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+    }
+    .formationImage {
+        position: relative;
+        background-image: url(/assets/img/format.png);
+        margin: 5px 0;
+      
+    background-size: 100% 100%;
+    height: 350px;
+
+        .team1{
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 40%;
+            i{
+                font-size: 30px;
+                color: #dc3545;
+                .number{
+                    position: absolute;
+                    top: 8px;
+                    left: 35%;
+                    font-size: 12px;
+                    color: #fff;
+                    &.one{
+                        left: 42%;
+
+                    }
+                }
+            }
+            // height: 50%;
+            i.goal{
+                position: absolute;
+                top: 0;
+                left: 45%;
+            }
+            .defnder{
+                i{
+                    position: absolute;
+                    top: 60%;
+                }
+                &.four{
+                    position: relative;
+                    top: 15%;
+                    i {
+                        &:nth-child(1){
+                            top: 0;
+                            left: 18%;
+                        }
+                        &:nth-child(2){
+                            left: 35%;
+                            top: 10px;
+                            }
+                        &:nth-child(3){
+                            left: 55%;
+                            top: 10px;
+                        }
+                        &:nth-child(4){
+                            left: auto;
+                            right: 18%;
+                        }
+                    }
+                }
+            }
+            .mid{
+                position: relative;
+                top: 45%;
+                i{
+                    position: absolute;
+           
+                        &:nth-child(1){
+                            left: 25%;
+                        }
+                        &:nth-child(2){
+                            left: 45%;
+                        }
+                        &:nth-child(3){
+                            left: 65%;
+                        }
+                        
+                
+                }
+
+            }
+
+            .forword{
+                position: relative;  
+                top: 75%;
+                i{
+                    position: absolute;
+           
+                        &:nth-child(1){
+                            left: 25%;
+                        }
+                        &:nth-child(2){
+                            left: 45%;
+                        }
+                        &:nth-child(3){
+                            left: 65%;
+                        }
+                        
+                
+                }
+
+            }
+        }
+        .team2{
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 40%;
+            height: 50%;
+            i{
+                font-size: 30px;
+                .number{
+                    position: absolute;
+                    top: 8px;
+                    left: 35%;
+                    font-size: 12px;
+                    color: #fff;
+                    &.one{
+                        left: 42%;
+
+                    }
+                }
+
+
+            }
+            i.goal{
+                position: absolute;
+                bottom: 0;
+                left: 45%;
+
+            }
+            .defnder{
+                i{
+                    position: absolute;
+                    top: 60%;
+                }
+                &.four{
+                    i {
+                        &:nth-child(1){
+                            top: 70%;
+                            left: 10%;
+                        }
+                        &:nth-child(2){
+                            left: 30%;
+                        }
+                        &:nth-child(3){
+                            left: 60%;
+                        }
+                        &:nth-child(4){
+                            top: 70%;
+
+                            left: 80%;
+                        }
+                    }
+                }
+            }
+            .mid{
+                position: relative;
+                top: 30%;
+
+                i{
+                    position: absolute;
+           
+                        &:nth-child(1){
+                            left: 18%;
+                            top: -10px;
+                        }
+                        &:nth-child(2){
+                            left: 35%;
+                        }
+                        &:nth-child(3){
+                            left: 55%;
+                        }
+                        &:nth-child(4){
+                            left: 75%;
+                            top: -10px;
+                        }
+                
+            }
+            }
+
+            .forword{
+                position: relative;
+                top: 0%;
+
+                i{
+                    position: absolute;
+           
+                        &:nth-child(1){
+                            left: 35%;
+                        }
+                        &:nth-child(2){
+                            left: 55%;
+                        }
+                        &:nth-child(3){
+                            left: 90%;
+                        }
+                
+            }
+            }
+            
+        }
+    }
+    .teamMembers{
+        margin-top: 15px;
+        position: relative;
+        .striper{
+            
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    background-color: #483f3f;
+
+
+        }
+    .playerInfo{
+        justify-content: space-evenly;
+        margin-bottom: 18px;
+
+        .inf{
+            color: #a09e9e;
+            font-size: 13px;
+        }
+
+        .tshirt{
+            font-size: 40px;
+            position: relative;
+            color: #33302C;
+            &.red{
+            color: #BF1723;
+
+            }
+            
+            .playerNumber{
+                position: absolute;
+                color: #fff;
+                font-size: 14px;
+                top: 15px;
+                left: 39%;
+
+            }
+        }
+        .name{
+            color: #fff;
+            display: block;
+
+        }
+    }
+}
+}
+.minuteContainer{
+    .hr{
+    
+        margin: -11px 0;
+    }
+    .minuteCont{
+background-color: #111514;
+padding: 10px 5px;
+margin: -10px 0;
+
+    .minute{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 100%;
+        color: #fff;
+        position: relative;
+        background: #000;
+        text-align: center;
+        display: inline-block;
+        float: right;
+        &.minRed{
+            background: #bd2130;
+            margin:  0 3px;
+
+        }
+        .additional{
+            position: absolute;
+            top: -39%;
+            right: 0;
+            font-size: 15px;
+            color: #bd2130;
+        }
+    }
+    .title{
+        color: #fff;
+        // float: right;
+        margin: 6px 8px;
+        display: inline-block;
+        text-align: start;
+        float: right;
+        width: 65%;
+        .playerImage{
+            position: relative;
+            float: left;
+            i{
+                position: absolute;
+                bottom: 2px;
+                right: -4px;
+                &.in{
+                    color: #9F8653;
+                    font-size: 24px;
+                    right: 2px;
+                }
+                &.out{
+                    color: #4C80DB;
+                    font-size: 24px;
+
+                
+
+                }
+                &.redCard{
+                     background: #BF1723;
+                    width: 15px;
+                    height: 17px;
+                }
+                &.yellowCard{
+                    background: #99f91a;
+                    width: 15px;
+                    height: 17px;
+                
+                }
+                &.flag{
+                    bottom: 4px;
+                    img{
+                    width: 15px ;
+                    height: 15px;
+                    }
+
+                }
+                &.closed{
+                    color: #fff;
+                    background:#BF1723;
+                    border-radius: 100%;
+                    padding: 2px 4px;
+                    font-size: 9px;
+                }
+            }
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    }
+        .goalStatus{
+            color: #a09e9e;
+            display: block;
+            margin: 0 5px;
+
+        }
+        .scorrerName{
+           float: right;
+          font-size: 11px;
+          color: #fff !important;
+          padding: 0 8px;
+      
+        }
+
+        .red{
+            color: #bd2130;
+
+        }
+    }
+    .share{
+        color: #bd2130;
+        i{
+
+            margin: 10px 5px;
+        }
+    }
+    }
+    .minuteDetails {
+        margin: 15px 0px;
+        .goalContainer {
+            text-align: start;
+        }
+    }
+    .clubLogo{
+        margin-top: 10px;
+        color: #a09e9e;
+        font-size: 17px;
+    
+        img{
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+.generalLook{
+    margin-top: 15px;
+
+    .secTitle{
+        padding: 9px 0;
+
+        .fa-exchange-alt{
+            transform: rotate(90deg);
+
+        }
+    }
+    .orderHeader{
+        padding: 15px 0;
+        color: #a09e9e;
+
+        .title{
+            text-align: start;
+            padding-right: 25px;
+
+        }
+        .col-3{
+            color: #a09e9e !important;
+        }
+    }
+    .clubRow{
+        text-align: start;
+        display: flex;
+        margin: 10px 0;
+        justify-content: space-between;
+        color: #fff;
+        .clubDetails{
+            flex: 0 0 65%;
+
+        }
+        .order{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 100%;
+            color: #fff;
+            position: relative;
+            background: #000;
+            text-align: center;
+            display: inline-block;
+            margin-right: 5px;
+
+        }
+    }
+    .col-3{
+        padding: 0;
+        text-align: center;
+        color: #fff;
+    }
+    .mainRow{
+        align-items: baseline;
+        padding: 0;
+
+    }
+    .pointsRow{
+        padding: 0;
+    }
+}
+.playerStatc{
+    background: #151919;
+
+.legue{
+    align-items: center;
+    display: flex;
+    padding: 0;
+    text-align: center;
+    justify-content: space-around;
+}
+.row {
+    width: 100%;
+  }
+  .clubLogo {
+    margin-right: 6px;
+    position: relative;
+    .clubMinLogo{
+        position: absolute;
+        bottom: 4px;
+        right: 33px;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+    }
+    .playerImg {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;   
+    
+    }
+  }
+  .clubName {
+    margin-top: 5px;
+    font-size: 14px;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    text-align: center;
+  }
+
+  .firstTime {
+
+    padding: 12px 0 ;
+
+    &:after {
+      content: "";
+      border-left: 1px solid #303b3b;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+    }
+    .clubLogo{
+        margin: 0;
+        text-align: center;
+          
+            .playerImg{
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+            }
+
+    }
+  }
+  .lastTime {
+    // text-align: center;
+    padding: 12px 0px;
+
+    .clubLogo {
+      margin: 0;
+    text-align: center;
+      
+        .playerImg{
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+        }
+    }
+    .clubName {
+      padding: 0;
+    }
+    &:after {
+      content: "";
+      border-right: 1px solid #303b3b;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+    }
+    .result {
+      right: -13px;
+      left: auto !important;
+    }
+  }
+  .result {
+    position: absolute;
+    top: 30%;
+    left: -13px;
+    background: #181d1d;
+    color: #fff;
+    border-radius: 100%;
+    padding: 3px 12px;
+    font-weight: bold;
+    z-index: 9;
+  }
+  .time {
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .legueLogo {
+    img {
+      width: auto;
+      height: 30px;
+      margin: 5px 0;
+    }
+  }
+  .status {
+    font-size: 14px;
+    background: #dc3545;
+    color: #fff;
+    border-radius: 25px;
+  }
+}
+
+.mathcStatc{
+    padding: 10px 0;
+    background: #151919;
+
+    .type{
+        font-size: 20px;
+        color: #fff;
+        font-weight: 500;
+        text-align: center;
+    }
+    .left , .right{
+
+        text-align: center;
+        font-weight: bold;
+        color: #dc3545;
+        font-size: 22px;
+    
+    }
+}
+
+.btnsContainer {
+    &.single{
+        position: relative;
+        &:after ,  &::before {
+            content: "";
+            border-top: 1px solid #625f5f;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 35%;
+        }
+        &::before{
+            left: auto;
+            right: 15px;
+        }
+    }
+    }
+  

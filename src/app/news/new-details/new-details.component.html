@@ -1,0 +1,58 @@
+ <!-- <app-header headerTitle="new details"></app-header> -->
+
+ <ion-content>
+     <div class="header-container" [ngStyle]="{'background-image': true?'url(./assets/img/news/02.png)':''}">
+         <ion-header class="ion-no-border">
+             <ion-toolbar>
+                 <ion-buttons slot="start">
+                     <ion-button color="light" (click)="popPage()">
+                         <ion-icon slot="icon-only" src="./assets/img/posts/forward.svg"></ion-icon>
+                     </ion-button>
+                 </ion-buttons>
+                 <ion-buttons slot="end">
+                     <ion-button color="light" (click)="popPage()">
+                         <ion-icon slot="icon-only" name="share-social"></ion-icon>
+                     </ion-button>
+                 </ion-buttons>
+
+
+             </ion-toolbar>
+         </ion-header>
+     </div>
+     <ion-card>
+         <ion-card-header>
+             <ion-card-subtitle>
+                 بعد فوز الريان على أم صلال إحتفالات كبيرة في كل
+                 المدن بسبب الفوز الكبير
+             </ion-card-subtitle>
+         </ion-card-header>
+         <ion-button shape="round"> 25 نوفمبر 2019</ion-button>
+
+         <ion-card-content>
+             <p>
+                 أكدت اللجنة العلمية لمكافحة كورونا بوزارة الصحة و السكان أن اللاعب محمد صلاح يخضع لبرتوكول علاجى مكثف
+                 للشفاء من عدوى كورونا وتابعت : رئيس اللجنة العلمية يتابع حالته على مدار الساعة وهناك رعاية طبية كاملة
+                 بمقر إقامته
+             </p>
+             <p>
+                 أكدت اللجنة العلمية لمكافحة كورونا بوزارة الصحة و السكان أن اللاعب محمد صلاح يخضع لبرتوكول علاجى مكثف
+                 للشفاء من عدوى كورونا وتابعت : رئيس اللجنة العلمية يتابع حالته على مدار الساعة وهناك رعاية طبية كاملة
+                 بمقر إقامته
+             </p>
+             <p>
+                 أكدت اللجنة العلمية لمكافحة كورونا بوزارة الصحة و السكان أن اللاعب محمد صلاح يخضع لبرتوكول علاجى مكثف
+                 للشفاء من عدوى كورونا وتابعت : رئيس اللجنة العلمية يتابع حالته على مدار الساعة وهناك رعاية طبية كاملة
+                 بمقر إقامته
+             </p>
+             <ion-buttons class="card-btns" slot="end">
+                 <ion-button class="f-btn">
+                     <ion-icon src="./assets/img/news/plus.svg"></ion-icon>
+                 </ion-button>
+                 <ion-button>
+                     <ion-icon src="./assets/img/news/minus.svg"></ion-icon>
+                 </ion-button>
+             </ion-buttons>
+         </ion-card-content>
+
+     </ion-card>
+ </ion-content>

@@ -1,0 +1,337 @@
+.headerMain {
+    position: relative;
+    z-index: 0;
+    &.lastSec{
+        margin-top: 20px;
+        .clubLogo{
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            .clubName{
+                font-size: 17px;
+                color: #fff;
+                margin: 0px 3px !important;
+            }
+        }
+        .legue{
+            padding: 0 !important;
+            .result{
+                 &.result1{
+                    right: -10px !important;
+    
+                }
+                &.result2{
+                    left: -10px !important;
+    
+                }
+
+            }
+           
+            .time{
+                 font-size: 15px !important;
+                color: #8f8d8d !important;
+                margin-top: 10px;
+            }
+
+        }
+
+    }
+    // .top-header{
+    //     text-align: center;
+    //     color: #fff;
+    //     .clubLogo{
+    //         img{
+    //         width: 50px;
+    //         height: auto;
+    //         }
+    //     }
+    //     .legue{
+    //         position: relative;
+    //         .result{
+    //             position: absolute;
+    //             left: 10px;
+    //             top: 17%;
+    //             background: #000;
+    //             font-size: 18px;
+    //             font-weight: bold;
+    //             width: 35px;
+    //             height: 35px;
+    //             line-height: 35px;
+    //             border-radius: 100%;
+    //             &.result1{
+    //                 left: auto;
+    //                  right: 10px;
+    //             }
+
+    //         }
+    //         .status{
+    //             display: inline-block;
+    //             margin: 8px 0;
+    //             background:#bd2130;
+    //             width: auto;
+    //             padding: 5px 10px;
+    //             border-radius: 15px;
+    //         }
+    //     .time{
+    //         display: block;
+    //         font-size: 18px;
+    //     }
+    //     .legueLogo{
+    //         img{
+    //             height: 20px;
+    //             width: 20px;
+    //         }
+    //     }
+    // }
+    // }
+    .bg{
+        background-image: url("/assets/img/team/staduim.png");
+        background-size: 100% 100%;
+        z-index: 0;    
+        height: 280px;
+
+        }
+        .overlayer{
+            background: rgba(0, 0, 0,1);
+            z-index: -1;
+
+
+        }
+
+     .main {
+         .title{
+            padding: 20px 0px;
+            div{
+                font-size: 20px;
+
+            }
+
+         }
+        .left{
+            .fa-trophy{
+                color: #bd2130;
+            }
+        }
+        }
+    
+     i{
+        font-size: 21px;
+
+    }
+  
+}
+.btnsContainer {
+     justify-content: center;
+        position: relative;
+        margin: 0;
+     .btn{
+        padding: 8px 22px;
+        margin: 0 8px;
+        background: #1c1c1c;
+        &.btn-danger{
+            background: #bd2130;
+            font-weight: bold;
+
+        }
+     }
+     &:before {
+        content: "";
+         position: absolute;
+        top: 17px;
+        height: 1px;
+        right: 10px;
+        width: 15%;
+        background: #b6b6b6;
+      }
+      &::after {
+        content: "";
+         position: absolute;
+        top: 17px;
+        height: 1px;
+        left: 10px;
+        width: 15%;
+        background: #b6b6b6;
+      }
+   }
+
+   
+ 
+  .row {
+    width: 100%;
+    margin: 0;
+
+  }
+  .clubLogo {
+    margin-right: 6px;
+
+    img {
+      width: 35px;
+      height: auto;
+    }
+  }
+  .clubName {
+    margin-top: 5px;
+    font-size: 16px;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .firstTime {
+    justify-content: flex-end;
+    color: #fff;
+
+  }
+  .lastTime {
+    justify-content: normal;
+    color: #fff;
+   
+
+    .clubLogo {
+      margin: 0;
+    }
+    .clubName {
+      padding: 0;
+      margin: 5px;
+
+    }
+    // &:after {
+    //   content: "";
+    //   border-right: 1px solid #dadada;
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   width: 1px;
+    //   height: 100%;
+    // }
+    .result {
+      right: -13px;
+      left: auto !important;
+    }
+  }
+
+  .legue{
+    padding: 0 !important;
+    margin-top: -10px;
+    text-align: center;
+    .result{
+         &.result1{
+            right: -10px !important;
+            left: auto;
+
+
+        }
+        &.result2{
+            left: -10px !important;
+
+        }
+
+    }
+   
+    .time{
+        font-size: 17px !important;
+        color: #fff !important;
+        font-weight: normal;
+        margin-top: -5px;
+    }
+
+}
+  .result {
+    position: absolute;
+    top: 25%;
+    left: -13px;
+    background: #000;
+    color: #fff;
+    border-radius: 100%;
+    padding: 1px 10px;
+    font-weight: bold;
+    z-index: 9;
+  }
+  .time {
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .legueLogo {
+        color: #fff;
+        font-size: 12px;
+    img {
+      width: auto;
+      height: 24px;
+      margin: 5px 0;
+    }
+  }
+  .status {
+    font-size: 14px;
+    background: #dc3545;
+    color: #fff;
+    border-radius: 25px;
+    padding: 5px 10px;
+     display: inline-block;
+  }
+
+   #container{
+       height: 100%;
+       padding-top: 0;
+       margin-top: -90px;
+       .Maintitle{
+           position: relative;
+           display: flex;
+           justify-content: center;
+           margin-bottom: 0;
+
+        .title{
+               color: #fff;
+               font-size: 18px;
+               margin-bottom: 0;
+
+               .count{
+                margin-top: 5px;
+                font-size: 17px;
+                margin-bottom: 0;
+
+                color: #878181;
+               }
+               &::before , &::after{
+                content: "";
+                position: absolute;
+                width: 18%;
+                background: #494141;
+                top: 10px;
+                height: .1px;
+                right: 12%;
+                   
+
+               }
+               &::after{
+                right: auto;
+                left: 12%;
+               }
+
+           }
+       }
+       .matches {
+           .legueLogo{
+            font-size: 16px;
+            padding: 0 10px;
+            img{
+                width: 30px;
+                margin: 5px;
+            }
+           }
+           .matchSlider{
+               .legue{
+                   margin-top: 0;
+               }
+               .status{
+                   margin-top: 8px;
+               }
+           }
+       }
+    }
+    .headerMain .main .icons, .headerMain .main .left, .headerMain .main .title{
+        padding: 10px 5px;
+    }

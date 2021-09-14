@@ -1,0 +1,279 @@
+ <app-header headerTitle="Posts Detials"></app-header>
+
+ <ion-content class="setting-content post-details" [fullscreen]="true">
+     <ion-card>
+         <div class="cup-img">
+             <img src="./assets/img/team/cup_logo.svg" />
+         </div>
+         <div class="baner-img">
+             <img src="./assets/img/team/card_baner.svg" />
+             <p><span>14</span> مشاركة</p>
+         </div>
+     </ion-card>
+     <ion-grid class="gird-vector">
+         <ion-row>
+             <ion-col size="4">
+                 <ion-label class="ion-text-wrap ion-text-center">
+                     <ion-text color="light">
+                         <h3> إنتصارات متتالية</h3>
+                     </ion-text>
+                     <p class="par">15</p>
+                 </ion-label>
+             </ion-col>
+             <ion-col size="4">
+
+                 <ion-label class="ion-text-wrap ion-text-center">
+                     <ion-text color="light">
+                         <h3> هزائم متتالية</h3>
+                     </ion-text>
+                     <p class="par">9</p>
+                 </ion-label>
+             </ion-col>
+             <ion-col size="4">
+
+                 <ion-label class="ion-text-wrap ion-text-center">
+                     <ion-text color="light">
+                         <h3> تعادل متتالي</h3>
+                     </ion-text>
+                     <p class="par">10</p>
+                 </ion-label>
+             </ion-col>
+
+         </ion-row>
+     </ion-grid>
+     <div class="matchSlider">
+         <ion-slides pager="true" [options]="slideOpts" pager="false">
+             <!-- *ngFor="let item of secondSlider" -->
+             <ion-slide *ngFor="let item of firstSlider">
+                 <div class="row">
+                     <div class="col-3 firstTime">
+                         <div class="clubLogo">
+                             <img src="assets/img/Al_rayyan_doha_qat.png">
+                         </div>
+                         <div class="clubName">
+                             الريان
+                         </div>
+                         <span class="result">2</span>
+                     </div>
+                     <div class="col-6 legue">
+                         <span class="time">18/10/2018</span>
+                         <span class="status">أعلى إنتصار</span>
+                         <div class="legueLogo">
+                             <!-- <img src="assets/img/cup.png"> -->
+                             <span>موسم 2018 - 2019</span>
+                         </div>
+                     </div>
+                     <div class="col-3 lastTime">
+
+                         <div class="clubLogo">
+                             <img src="assets/img/Al_rayyan_doha_qat.png">
+                         </div>
+                         <div class="clubName">
+                             العربي
+                         </div>
+                         <span class="result">1</span>
+
+                     </div>
+
+                 </div>
+
+             </ion-slide>
+
+         </ion-slides>
+     </div>
+     <div class="board-of-directors">
+         <div class="btnsContainer text-center">
+             <button (click)="currentBtn=!currentBtn" [ngClass]="{'active btn-danger ': currentBtn}"
+                 class="btn current">
+                 إحصائيات البطولة
+             </button>
+             <button (click)="currentBtn=!currentBtn" [ngClass]="{'active btn-danger ': !currentBtn}" class="btn last">
+                 تاريخ المواجهات
+             </button>
+         </div>
+     </div>
+
+     <ion-grid class="statistic-grid" *ngIf="currentBtn">
+         <ion-row>
+             <ion-col size="2">
+                 <ion-label class="ion-text-wrap ion-text-center">
+                     <ion-text color="light">
+                         <h3>مباريات</h3>
+                     </ion-text>
+                     <ion-text color="light">
+                         <p>80</p>
+                     </ion-text>
+
+                 </ion-label>
+             </ion-col>
+             <ion-col size="2">
+                 <ion-label class="ion-text-wrap ion-text-center">
+                     <ion-text color="light">
+                         <h3>فوز</h3>
+                     </ion-text>
+                     <ion-text color="light">
+
+                         <p>70</p>
+                     </ion-text>
+
+                 </ion-label>
+             </ion-col>
+             <ion-col size="2">
+                 <ion-label class="ion-text-wrap ion-text-center">
+                     <ion-text color="light">
+                         <h3>هزيمة</h3>
+                     </ion-text>
+                     <ion-text color="light">
+                         <p>60</p>
+                     </ion-text>
+
+                 </ion-label>
+             </ion-col>
+             <ion-col size="2">
+                 <ion-label class="ion-text-wrap ion-text-center">
+                     <ion-text color="light">
+                         <h3>تعادل</h3>
+                     </ion-text>
+                     <ion-text color="light">
+                         <p>50</p>
+                     </ion-text>
+
+                 </ion-label>
+             </ion-col>
+             <ion-col size="2">
+                 <ion-label class="ion-text-wrap ion-text-center">
+                     <ion-text color="light">
+                         <h3>أهداف له</h3>
+                     </ion-text>
+                     <ion-text color="light">
+                         <p>121</p>
+                     </ion-text>
+
+                 </ion-label>
+             </ion-col>
+             <ion-col size="2">
+                 <ion-label class="ion-text-wrap ion-text-center">
+                     <ion-text color="light">
+                         <h3 color="light">أهداف عليه</h3>
+                     </ion-text>
+                     <ion-text color="light">
+                         <p>114</p>
+                     </ion-text>
+
+                 </ion-label>
+             </ion-col>
+         </ion-row>
+     </ion-grid>
+     <div class="list-btn">
+         <ion-list *ngIf="!currentBtn" class="list-match" lines="inset">
+
+             <ion-item>
+                 <div class="row">
+                     <div class="col-3 firstTime">
+                         <div class="clubLogo">
+                             <img src="./assets/img/Al_rayyan_doha_qat.png">
+                         </div>
+                         <div class="clubName">
+                             الريان
+                         </div>
+                         <span class="result">2</span>
+                     </div>
+                     <div class="col-6 legue">
+                         <span class="time">18/10/2018</span>
+                         <span class="status status-win">فوز</span>
+                         <div class="legueLogo">
+                             <span>موسم 2018 - 2019</span>
+                         </div>
+                     </div>
+                     <div class="col-3 lastTime">
+
+                         <div class="clubLogo">
+                             <img src="./assets/img/team/Club_2_logo.svg">
+                         </div>
+                         <div class="clubName">
+                             العربي
+                         </div>
+                         <span class="result">1</span>
+
+                     </div>
+
+                 </div>
+             </ion-item>
+
+             <ion-item>
+                 <div class="row">
+                     <div class="col-3 firstTime">
+                         <div class="clubLogo">
+                             <img src="assets/img/Al_rayyan_doha_qat.png">
+                         </div>
+                         <div class="clubName">
+                             الريان
+                         </div>
+                         <span class="result">2</span>
+                     </div>
+                     <div class="col-6 legue">
+                         <span class="time">18/10/2018</span>
+                         <span class="status status-tied">تعادل</span>
+                         <div class="legueLogo">
+                             <span>موسم 2018 - 2019</span>
+                         </div>
+                     </div>
+                     <div class="col-3 lastTime">
+
+                         <div class="clubLogo">
+                             <img src="./assets/img/team/Club_2_logo.svg">
+                         </div>
+                         <div class="clubName">
+                             العربي
+                         </div>
+                         <span class="result">1</span>
+
+                     </div>
+
+                 </div>
+             </ion-item>
+             <ion-item>
+                 <div class="row">
+                     <div class="col-3 firstTime">
+                         <div class="clubLogo">
+                             <img src="assets/img/Al_rayyan_doha_qat.png">
+                         </div>
+                         <div class="clubName">
+                             الريان
+                         </div>
+                         <span class="result">2</span>
+                     </div>
+                     <div class="col-6 legue">
+                         <span class="time">18/10/2018</span>
+                         <span class="status">هزيمة</span>
+                         <div class="legueLogo">
+                             <span>موسم 2018 - 2019</span>
+                         </div>
+                     </div>
+                     <div class="col-3 lastTime">
+
+                         <div class="clubLogo">
+                             <img src="./assets/img/team/Club_2_logo.svg">
+                         </div>
+                         <div class="clubName">
+                             العربي
+                         </div>
+                         <span class="result">1</span>
+
+                     </div>
+
+                 </div>
+             </ion-item>
+
+         </ion-list>
+
+
+         <ion-button class="comptative-btn" *ngIf="!currentBtn" shape="round"
+             (click)="openPage('/posts/Confrontations')">
+             <ion-icon name="add-circle-outline"></ion-icon>
+             كل المواجهات
+         </ion-button>
+     </div>
+
+
+ </ion-content>

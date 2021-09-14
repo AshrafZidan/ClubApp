@@ -1,0 +1,38 @@
+<ion-app dir="rtl">
+  <ion-menu side="end" contentId="main-content" type="push" swipeGesture="false">
+    <ion-content>
+      <ion-list id="inbox-list">
+        <div class="selectedClub">
+          <div class="d-flex bordred">
+            <div class="clubLogo">
+              <img src="assets/img/Al_rayyan_doha_qat.png" alt="clubName">
+            </div>
+            <div class="details">
+
+              <ion-list-header class="clubName">الريان القطرى</ion-list-header>
+              <span class="selectClub">اختر الفريق</span>
+            </div>
+            <div class="arrow" (click)="navigationToPage('/team-players/select-team'); closeMenu()">
+              <span class="fas fa-chevron-left"></span>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+        <ion-menu-toggle *ngFor="let p of appPages; let i = index">
+          <ion-item (click)="selectedIndex = i;navigationToPage(p.url)" lines="none" detail="false"
+            [class.selected]="selectedIndex == i">
+            <!-- <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon> -->
+            <i [class]="'fas fa-'+p.icon" class="menu-icon"></i>
+            <ion-label class="menu-title">{{ p.title }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>

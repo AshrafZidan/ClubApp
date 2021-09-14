@@ -1,0 +1,91 @@
+.headerMain {
+  height: 225px;
+  position: relative;
+  padding: 5px;
+  .bg {
+    background-size: 100% 200%;
+    height: 225px;
+  }
+  .top-header {
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    right: 10px;
+    background-color: #1c1c1c;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-image: url("/assets/img/team/mask.svg");
+
+    height: 150px;
+    background-size: 100%;
+    color: #fff;
+    z-index: 9;
+    text-align: center;
+    .clubInfo {
+      padding: 10px;
+      .clubLogo {
+        img {
+          height: 80px;
+          width: 80px;
+        }
+      }
+      .clubName {
+        font-weight: 600;
+      }
+      i {
+        color: #dc3545;
+        margin: 2px 5px;
+      }
+      .data {
+        padding: 0 5px;
+        .date,
+        .site,
+        .dilmeter {
+          color: #707070;
+        }
+        .dilmeter {
+          width: 1px;
+          height: 10px;
+          background: #5c5656;
+          margin: 0;
+          text-align: center;
+          display: inline-block;
+        }
+        .col-5-c {
+          flex: 0 0 48%;
+          max-width: 48%;
+        }
+      }
+    }
+  }
+}
+.fisrt-list {
+  background: transparent;
+  ion-item {
+    --background: transparent;
+    --border-color: var(--ion-color-light);
+    color: var(--ion-color-light);
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-top: 10px;
+    --inner-padding-bottom: 10px;
+    --inner-border-width: 0;
+    --border-width: 0 0 1px 0;
+  }
+  ion-avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  .end-par {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--ion-color-danger);
+    font-weight: bold;
+  }
+  .start-par {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}

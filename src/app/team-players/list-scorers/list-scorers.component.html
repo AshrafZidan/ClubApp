@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="light" (click)="popPage()">
+        <ion-icon slot="icon-only" src="./assets/img/posts/forward.svg"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="light">
+      قوائم الهدافين
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="light" (click)="searchModal()">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+      <ion-button color="danger" (click)="presentModal()">
+        <ion-icon slot="icon-only" name="funnel"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="setting-content" [fullscreen]="true">
+  <ion-list class="ion-padding notification-profile" lines="inset">
+
+    <ion-item (click)="openPage('team-players/attacker-details')">
+      <ion-avatar slot="start">
+        <img src="./assets/img/posts/player.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+        <p>مهاجم</p>
+      </ion-label>
+      <p class="end-par" slot="end">40</p>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="./assets/img/posts/player.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+        <p>مهاجم</p>
+      </ion-label>
+      <p class="end-par" slot="end">40</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="./assets/img/posts/player.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+        <p>مهاجم</p>
+      </ion-label>
+      <p class="end-par" slot="end">40</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="./assets/img/posts/player.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>سبستيان سوريا</h3>
+        <p>مهاجم</p>
+      </ion-label>
+      <p class="end-par" slot="end">40</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
